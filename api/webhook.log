@@ -1,0 +1,245 @@
+2025-07-17 23:54:20 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"118479994381"},"date_created":"2025-07-17T23:54:19Z","id":123070949222,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 118479994381
+2025-07-18 00:04:25 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"118480413247"},"date_created":"2025-07-18T00:04:24Z","id":123071183574,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 118480413247
+2025-07-18 00:04:42 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"118986213798"},"date_created":"2025-07-18T00:04:41Z","id":123071288510,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 118986213798
+2025-07-18 00:09:10 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"118986615886"},"date_created":"2025-07-18T00:09:09Z","id":122992083121,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 118986615886
+2025-07-18 00:12:37 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"118480780005"},"date_created":"2025-07-18T00:12:36Z","id":122992151775,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 118480780005
+2025-07-18 00:29:44 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"118988659888"},"date_created":"2025-07-18T00:29:43Z","id":122992631089,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 118988659888
+2025-07-18 00:38:33 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"118989883374"},"date_created":"2025-07-18T00:38:32Z","id":123072109178,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 118989883374
+2025-07-18 00:59:58 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"118486766267"},"date_created":"2025-07-18T00:59:57Z","id":123072649146,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 118486766267
+2025-07-18 01:11:36 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"118993702538"},"date_created":"2025-07-18T01:11:35Z","id":123072938416,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 118993702538
+2025-07-18 13:35:42 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"118532116557"},"date_created":"2025-07-18T13:35:40Z","id":123003516509,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 118532116557
+2025-07-19 03:04:50 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"119130921526"},"date_created":"2025-07-19T03:04:46Z","id":123024513553,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 119130921526
+2025-07-19 03:08:25 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"118624303523"},"date_created":"2025-07-19T03:08:23Z","id":123104001180,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago aprobado - ID: 118624303523 - Referencia: 3JKMR3MX6
+2025-07-19 03:09:16 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"118625802467"},"date_created":"2025-07-19T03:09:14Z","id":123104042672,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago aprobado - ID: 118625802467 - Referencia: 6O07KWTAS
+2025-11-01 19:13:03 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"132120393840"},"date_created":"2025-11-01T19:13:00Z","id":126019978564,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-01 19:13:03 - Entrada: {"resource":"132120393840","topic":"payment"}
+Pago aprobado - ID: 132120393840 - Referencia: 138RHCJLU
+2025-11-02 20:31:29 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"131636100253"},"date_created":"2025-11-02T20:31:27Z","id":126048196490,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-02 20:31:29 - Entrada: {"resource":"131636100253","topic":"payment"}
+Pago no aprobado o no encontrado: ID 131636100253
+2025-11-04 16:42:19 - Entrada: {"resource":"131866809153","topic":"payment"}
+2025-11-04 16:42:19 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"131866809153"},"date_created":"2025-11-04T16:42:16Z","id":126098241302,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago aprobado - ID: 131866809153 - Referencia: U0HGPNE7A
+2025-11-05 22:43:01 - Entrada: {"resource":"132051141837","topic":"payment"}
+2025-11-05 22:43:01 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"132051141837"},"date_created":"2025-11-05T22:42:58Z","id":126042153857,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 132051141837
+2025-11-05 22:43:01 - Entrada: {"resource":"132051141837","topic":"payment"}
+2025-11-05 22:44:02 - Entrada: {"action":"payment.updated","api_version":"v1","data":{"id":"132051141837"},"date_created":"2025-11-05T22:42:58Z","id":126137671342,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 132051141837
+2025-11-07 15:19:11 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"132280344235"},"date_created":"2025-11-07T15:19:07Z","id":126089980509,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-07 15:19:11 - Entrada: {"resource":"132280344235","topic":"payment"}
+Pago aprobado - ID: 132280344235 - Referencia: I21MXQSH0
+2025-11-07 18:13:35 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"132904709618"},"date_created":"2025-11-07T18:13:34Z","id":126190505962,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-07 18:13:35 - Entrada: {"resource":"132904709618","topic":"payment"}
+Pago no aprobado o no encontrado: ID 132904709618
+2025-11-07 20:07:26 - Entrada: {"resource":"132315688059","topic":"payment"}
+2025-11-07 20:07:27 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"132315688059"},"date_created":"2025-11-07T20:07:22Z","id":126193772474,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago aprobado - ID: 132315688059 - Referencia: IM6IOZRS4
+2025-11-07 20:17:26 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"132320088235"},"date_created":"2025-11-07T20:17:24Z","id":126193963482,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-07 20:17:26 - Entrada: {"resource":"132320088235","topic":"payment"}
+Pago no aprobado o no encontrado: ID 132320088235
+2025-11-07 20:26:26 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"132923115026"},"date_created":"2025-11-07T20:26:24Z","id":126194286712,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-07 20:26:26 - Entrada: {"resource":"132923115026","topic":"payment"}
+Pago no aprobado o no encontrado: ID 132923115026
+2025-11-07 20:31:31 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"132922245918"},"date_created":"2025-11-07T20:31:29Z","id":126098639357,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-07 20:31:31 - Entrada: {"resource":"132922245918","topic":"payment"}
+Pago no aprobado o no encontrado: ID 132922245918
+2025-11-07 20:31:33 - Entrada: {"resource":"132922245918","topic":"payment"}
+2025-11-07 20:32:32 - Entrada: {"action":"payment.updated","api_version":"v1","data":{"id":"132922245918"},"date_created":"2025-11-07T20:31:29Z","id":126194566296,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 132922245918
+2025-11-07 20:37:03 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"132926290114"},"date_created":"2025-11-07T20:37:01Z","id":126194587166,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-07 20:37:03 - Entrada: {"resource":"132926290114","topic":"payment"}
+Pago no aprobado o no encontrado: ID 132926290114
+2025-11-07 20:44:43 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"132926247008"},"date_created":"2025-11-07T20:44:41Z","id":126194846898,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-07 20:44:43 - Entrada: {"resource":"132926247008","topic":"payment"}
+Pago no aprobado o no encontrado: ID 132926247008
+2025-11-07 20:51:44 - Entrada: {"resource":"132325498217","topic":"payment"}
+2025-11-07 20:51:44 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"132325498217"},"date_created":"2025-11-07T20:51:42Z","id":126099314473,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 132325498217
+2025-11-07 20:51:44 - Entrada: {"resource":"132325498217","topic":"payment"}
+2025-11-07 20:52:45 - Entrada: {"action":"payment.updated","api_version":"v1","data":{"id":"132325498217"},"date_created":"2025-11-07T20:51:42Z","id":126195150770,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 132325498217
+2025-11-08 14:31:03 - Entrada: {"resource":"132406689833","topic":"payment"}
+2025-11-08 14:31:03 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"132406689833"},"date_created":"2025-11-08T14:30:59Z","id":126119604625,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago aprobado - ID: 132406689833 - Referencia: 6QD88Y8DB
+2025-11-08 14:38:12 - Entrada: {"resource":"133010807912","topic":"payment"}
+2025-11-08 14:38:12 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"133010807912"},"date_created":"2025-11-08T14:38:08Z","id":126215631110,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago aprobado - ID: 133010807912 - Referencia: TRQCSH7A0
+2025-11-09 00:09:11 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"132483964095"},"date_created":"2025-11-09T00:09:08Z","id":126231576998,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-09 00:09:11 - Entrada: {"resource":"132483964095","topic":"payment"}
+Pago no aprobado o no encontrado: ID 132483964095
+2025-11-09 00:23:53 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"132486471577"},"date_created":"2025-11-09T00:23:51Z","id":126136007633,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-09 00:23:53 - Entrada: {"resource":"132486471577","topic":"payment"}
+Pago no aprobado o no encontrado: ID 132486471577
+2025-11-09 14:20:50 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"132529915021"},"date_created":"2025-11-09T14:20:48Z","id":126148973805,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-09 14:20:50 - Entrada: {"resource":"132529915021","topic":"payment"}
+Pago no aprobado o no encontrado: ID 132529915021
+2025-11-09 16:18:20 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"132542246039"},"date_created":"2025-11-09T16:18:18Z","id":126151617473,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-09 16:18:20 - Entrada: {"resource":"132542246039","topic":"payment"}
+Pago no aprobado o no encontrado: ID 132542246039
+2025-11-10 01:55:52 - Entrada: {"resource":"133201183932","topic":"payment"}
+2025-11-10 01:55:52 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"133201183932"},"date_created":"2025-11-10T01:55:51Z","id":126165896797,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 133201183932
+2025-11-10 01:59:52 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"132598447283"},"date_created":"2025-11-10T01:59:51Z","id":126166006305,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-10 01:59:52 - Entrada: {"resource":"132598447283","topic":"payment"}
+Pago no aprobado o no encontrado: ID 132598447283
+2025-11-10 19:25:38 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"132692464115"},"date_created":"2025-11-10T19:25:36Z","id":126281015062,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-10 19:25:38 - Entrada: {"resource":"132692464115","topic":"payment"}
+Pago no aprobado o no encontrado: ID 132692464115
+2025-11-10 19:30:03 - Entrada: {"resource":"132692550259","topic":"payment"}
+2025-11-10 19:30:03 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"132692550259"},"date_created":"2025-11-10T19:30:02Z","id":126281039886,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 132692550259
+2025-11-10 21:20:42 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"132706669379"},"date_created":"2025-11-10T21:20:41Z","id":126188017825,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 132706669379
+2025-11-10 21:20:43 - Entrada: {"resource":"132706669379","topic":"payment"}
+2025-11-10 23:08:50 - Entrada: {"resource":"132724618279","topic":"payment"}
+2025-11-10 23:08:50 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"132724618279"},"date_created":"2025-11-10T23:08:48Z","id":126287639646,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 132724618279
+2025-11-11 01:26:34 - Entrada: {"resource":"132740744941","topic":"payment"}
+2025-11-11 01:26:34 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"132740744941"},"date_created":"2025-11-11T01:26:33Z","id":126195306521,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 132740744941
+2025-11-11 01:36:28 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"132740881639"},"date_created":"2025-11-11T01:36:27Z","id":126291820474,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-11 01:36:28 - Entrada: {"resource":"132740881639","topic":"payment"}
+Pago no aprobado o no encontrado: ID 132740881639
+2025-11-11 16:45:06 - Entrada: {"resource":"132815045131","topic":"payment"}
+2025-11-11 16:45:06 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"132815045131"},"date_created":"2025-11-11T16:45:05Z","id":126210344237,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 132815045131
+2025-11-12 16:38:21 - Entrada: {"resource":"132952700809","topic":"payment"}
+2025-11-12 16:38:21 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"132952700809"},"date_created":"2025-11-12T16:38:19Z","id":126239372061,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 132952700809
+2025-11-14 15:35:16 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"133830648416"},"date_created":"2025-11-14T15:35:13Z","id":126295165403,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-14 15:35:16 - Entrada: {"resource":"133830648416","topic":"payment"}
+Pago aprobado - ID: 133830648416 - Referencia: 3X6N9Y4EQ
+2025-11-14 15:40:07 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"133222204937"},"date_created":"2025-11-14T15:40:05Z","id":126295346661,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-14 15:40:07 - Entrada: {"resource":"133222204937","topic":"payment"}
+Pago no aprobado o no encontrado: ID 133222204937
+2025-11-15 00:47:22 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"133906982000"},"date_created":"2025-11-15T00:47:19Z","id":126408140646,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-15 00:47:22 - Entrada: {"resource":"133906982000","topic":"payment"}
+Pago no aprobado o no encontrado: ID 133906982000
+2025-11-15 00:53:07 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"133299243959"},"date_created":"2025-11-15T00:53:05Z","id":126408199856,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-15 00:53:07 - Entrada: {"resource":"133299243959","topic":"payment"}
+Pago no aprobado o no encontrado: ID 133299243959
+2025-11-16 18:01:55 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"134097238840"},"date_created":"2025-11-16T18:01:54Z","id":126454776950,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 134097238840
+2025-11-16 18:02:56 - Entrada: {"resource":"134097238840","topic":"payment"}
+2025-11-17 12:01:53 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"133560464507"},"date_created":"2025-11-17T12:01:52Z","id":126376285485,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-17 12:01:53 - Entrada: {"resource":"133560464507","topic":"payment"}
+Pago no aprobado o no encontrado: ID 133560464507
+2025-11-17 12:19:17 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"133559934053"},"date_created":"2025-11-17T12:19:16Z","id":126376664209,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-17 12:19:17 - Entrada: {"resource":"133559934053","topic":"payment"}
+Pago no aprobado o no encontrado: ID 133559934053
+2025-11-17 15:10:24 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"134189274786"},"date_created":"2025-11-17T15:10:23Z","id":126379987957,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-17 15:10:24 - Entrada: {"resource":"134189274786","topic":"payment"}
+Pago no aprobado o no encontrado: ID 134189274786
+2025-11-17 18:48:32 - Entrada: {"resource":"133605539709","topic":"payment"}
+2025-11-17 18:48:32 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"133605539709"},"date_created":"2025-11-17T18:48:29Z","id":126483006046,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 133605539709
+2025-11-17 18:56:09 - Entrada: {"resource":"133607816717","topic":"payment"}
+2025-11-17 18:56:09 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"133607816717"},"date_created":"2025-11-17T18:56:07Z","id":126385706857,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 133607816717
+2025-11-17 20:32:38 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"134229778264"},"date_created":"2025-11-17T20:32:34Z","id":126388165941,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-17 20:32:38 - Entrada: {"resource":"134229778264","topic":"payment"}
+Pago aprobado - ID: 134229778264 - Referencia: 996S9JEBR
+2025-11-18 15:05:38 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"133716223619"},"date_created":"2025-11-18T15:05:37Z","id":126505990594,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-18 15:05:38 - Entrada: {"resource":"133716223619","topic":"payment"}
+Pago no aprobado o no encontrado: ID 133716223619
+2025-11-18 15:11:00 - Entrada: {"resource":"134330096106","topic":"payment"}
+2025-11-18 15:11:00 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"134330096106"},"date_created":"2025-11-18T15:10:59Z","id":126408449461,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 134330096106
+2025-11-18 16:28:04 - Entrada: {"resource":"133728235711","topic":"payment"}
+2025-11-18 16:28:04 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"133728235711"},"date_created":"2025-11-18T16:28:01Z","id":126410546469,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago aprobado - ID: 133728235711 - Referencia: OTDK6A3TU
+2025-11-18 17:51:43 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"133738047513"},"date_created":"2025-11-18T17:51:42Z","id":126510180378,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-18 17:51:43 - Entrada: {"resource":"133738047513","topic":"payment"}
+Pago no aprobado o no encontrado: ID 133738047513
+2025-11-20 16:22:46 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"133998627525"},"date_created":"2025-11-20T16:22:43Z","id":126564317134,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-20 16:22:46 - Entrada: {"resource":"133998627525","topic":"payment"}
+Pago aprobado - ID: 133998627525 - Referencia: M6NSUP7H2
+2025-11-20 17:18:04 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"134004865641"},"date_created":"2025-11-20T17:18:02Z","id":126467605649,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-20 17:18:04 - Entrada: {"resource":"134004865641","topic":"payment"}
+Pago no aprobado o no encontrado: ID 134004865641
+2025-11-21 13:43:09 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"134100879645"},"date_created":"2025-11-21T13:43:07Z","id":126589081914,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-21 13:43:09 - Entrada: {"resource":"134100879645","topic":"payment"}
+Pago no aprobado o no encontrado: ID 134100879645
+2025-11-21 16:21:35 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"134736209768"},"date_created":"2025-11-21T16:21:33Z","id":126592697822,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-21 16:21:35 - Entrada: {"resource":"134736209768","topic":"payment"}
+Pago no aprobado o no encontrado: ID 134736209768
+2025-11-21 16:29:54 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"134738507220"},"date_created":"2025-11-21T16:29:53Z","id":126592965550,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-21 16:29:54 - Entrada: {"resource":"134738507220","topic":"payment"}
+Pago no aprobado o no encontrado: ID 134738507220
+2025-11-21 17:43:35 - Entrada: {"resource":"134748526246","topic":"payment"}
+2025-11-21 17:43:35 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"134748526246"},"date_created":"2025-11-21T17:43:33Z","id":126594729754,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 134748526246
+2025-11-21 17:48:58 - Entrada: {"resource":"134133359667","topic":"payment"}
+2025-11-21 17:48:58 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"134133359667"},"date_created":"2025-11-21T17:48:57Z","id":126496658665,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 134133359667
+2025-11-21 17:57:10 - Entrada: {"resource":"134136152303","topic":"payment"}
+2025-11-21 17:57:10 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"134136152303"},"date_created":"2025-11-21T17:57:08Z","id":126595103182,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 134136152303
+2025-11-22 17:40:55 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"134259026171"},"date_created":"2025-11-22T17:40:52Z","id":126524284445,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-22 17:40:55 - Entrada: {"resource":"134259026171","topic":"payment"}
+Pago aprobado - ID: 134259026171 - Referencia: GZ44MLOYO
+2025-11-22 21:04:28 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"134280624471"},"date_created":"2025-11-22T21:04:26Z","id":126529010473,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-22 21:04:28 - Entrada: {"resource":"134280624471","topic":"payment"}
+Pago no aprobado o no encontrado: ID 134280624471
+2025-11-23 19:04:33 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"134986335036"},"date_created":"2025-11-23T19:04:29Z","id":126552190069,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-23 19:04:33 - Entrada: {"resource":"134986335036","topic":"payment"}
+Pago aprobado - ID: 134986335036 - Referencia: 4TQ2O9HLI
+2025-11-24 21:43:55 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"134495429041"},"date_created":"2025-11-24T21:43:51Z","id":126680736802,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-24 21:43:55 - Entrada: {"resource":"134495429041","topic":"payment"}
+Pago aprobado - ID: 134495429041 - Referencia: VFXDQUCRD
+2025-11-25 00:42:48 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"135128893596"},"date_created":"2025-11-25T00:42:47Z","id":126586936353,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-25 00:42:48 - Entrada: {"resource":"135128893596","topic":"payment"}
+Pago no aprobado o no encontrado: ID 135128893596
+2025-11-25 00:52:57 - Entrada: {"resource":"134516798339","topic":"payment"}
+2025-11-25 00:52:57 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"134516798339"},"date_created":"2025-11-25T00:52:56Z","id":126587190257,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 134516798339
+2025-11-27 22:16:30 - Entrada: {"resource":"134895224159","topic":"payment"}
+2025-11-27 22:16:30 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"134895224159"},"date_created":"2025-11-27T22:16:28Z","id":126767089550,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 134895224159
+2025-11-27 22:20:38 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"134894173359"},"date_created":"2025-11-27T22:20:36Z","id":126667892461,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-27 22:20:38 - Entrada: {"resource":"134894173359","topic":"payment"}
+Pago no aprobado o no encontrado: ID 134894173359
+2025-11-27 22:26:20 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"135510915040"},"date_created":"2025-11-27T22:26:19Z","id":126767369448,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-27 22:26:21 - Entrada: {"resource":"135510915040","topic":"payment"}
+Pago no aprobado o no encontrado: ID 135510915040
+2025-11-27 22:40:39 - Entrada: {"resource":"135513822292","topic":"payment"}
+2025-11-27 22:40:39 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"135513822292"},"date_created":"2025-11-27T22:40:37Z","id":126668478229,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 135513822292
+2025-11-27 23:14:49 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"134901969075"},"date_created":"2025-11-27T23:14:47Z","id":126768872580,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-27 23:14:49 - Entrada: {"resource":"134901969075","topic":"payment"}
+Pago no aprobado o no encontrado: ID 134901969075
+2025-11-28 01:47:54 - Entrada: {"resource":"135535051902","topic":"payment"}
+2025-11-28 01:47:54 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"135535051902"},"date_created":"2025-11-28T01:47:52Z","id":126673491713,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago no aprobado o no encontrado: ID 135535051902
+2025-11-28 15:51:34 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"134993143429"},"date_created":"2025-11-28T15:51:32Z","id":126688487029,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-28 15:51:34 - Entrada: {"resource":"134993143429","topic":"payment"}
+Pago no aprobado o no encontrado: ID 134993143429
+2025-11-28 19:00:53 - Entrada: {"resource":"135635301854","topic":"payment"}
+2025-11-28 19:00:53 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"135635301854"},"date_created":"2025-11-28T19:00:49Z","id":126794327004,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago aprobado - ID: 135635301854 - Referencia: ZRJ8SL7XP
+2025-11-28 19:24:37 - Entrada: {"resource":"135638725660","topic":"payment"}
+2025-11-28 19:24:37 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"135638725660"},"date_created":"2025-11-28T19:24:33Z","id":126695656165,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago aprobado - ID: 135638725660 - Referencia: PDSX5NZO1
+2025-11-28 21:51:55 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"135047950585"},"date_created":"2025-11-28T21:51:54Z","id":126800315990,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-28 21:51:55 - Entrada: {"resource":"135047950585","topic":"payment"}
+Pago no aprobado o no encontrado: ID 135047950585
+2025-11-28 22:38:31 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"135670649312"},"date_created":"2025-11-28T22:38:29Z","id":126702267625,"live_mode":true,"type":"payment","user_id":"1673855193"}
+2025-11-28 22:38:31 - Entrada: {"resource":"135670649312","topic":"payment"}
+Pago no aprobado o no encontrado: ID 135670649312
+2025-11-29 04:40:53 - Entrada: {"resource":"135097808931","topic":"payment"}
+2025-11-29 04:40:53 - Entrada: {"action":"payment.created","api_version":"v1","data":{"id":"135097808931"},"date_created":"2025-11-29T04:40:50Z","id":126712729325,"live_mode":true,"type":"payment","user_id":"1673855193"}
+Pago aprobado - ID: 135097808931 - Referencia: 5OM8VQ0HO

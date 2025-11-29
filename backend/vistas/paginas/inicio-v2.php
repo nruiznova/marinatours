@@ -1,0 +1,111 @@
+<?php 
+
+  // if($admin["perfil"] != "Administrador"){
+
+  //   echo '<script>
+
+  //     window.location = "banner";
+
+  //   </script>';
+
+  //   return;
+
+  // }
+
+ ?>
+
+ <div class="content-wrapper" style="min-height: 717px;">
+
+  <section class="content-header">
+
+    <div class="container-fluid">
+
+      <div class="row mb-2">
+
+        <div class="col-sm-6">
+
+          <h1>Analíticas isla palma</h1>
+
+        </div>
+
+        <div class="col-sm-6">
+
+          <ol class="breadcrumb float-sm-right">
+
+            <li class="breadcrumb-item"><a href="inicio">Inicio</a></li>
+            <li class="breadcrumb-item active">Analíticas isla palma</li>
+
+          </ol>
+
+        </div>
+
+      </div>
+
+    </div><!-- /.container-fluid -->
+
+  </section>
+
+  <!-- Main content -->
+  <section class="content pb-5">
+
+    <div class="container-fluid">
+
+      <div class="row">
+
+        <?php 
+
+        include "modulos/top-v2.php";
+
+        ?>   
+        
+        <div class="col-12">
+
+          <?php 
+
+            include "modulos/ventas-v2.php";
+
+          ?>
+          
+        </div>
+
+        <div class="col-8">
+
+          <?php 
+
+            include "modulos/calendario-v2.php";
+
+          ?>
+          
+        </div>
+
+        <div class="col-4">
+
+          <div class="col-12 d-none">
+
+            <?php 
+
+              include "modulos/ultimosUsuarios.php";
+
+            ?>
+
+          </div>
+
+          <div class="col-12">
+
+            <?php 
+
+              include "modulos/ultimasReservas-v2.php";
+
+            ?>
+
+          </div>
+          
+        </div>
+
+      </div>     
+      
+    </div>
+
+  </section>
+  <!-- /.content -->
+</div>

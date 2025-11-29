@@ -1,0 +1,909 @@
+[04-Oct-2025 01:01:26 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'total' for column `marinatourscarta_database`.`reservas_temporales`.`abono` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[04-Oct-2025 01:04:36 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'total' for column `marinatourscarta_database`.`reservas_temporales`.`abono` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[04-Oct-2025 01:04:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'total' for column `marinatourscarta_database`.`reservas_temporales`.`abono` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[04-Oct-2025 01:04:46 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'total' for column `marinatourscarta_database`.`reservas_temporales`.`abono` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[04-Oct-2025 01:05:01 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'total' for column `marinatourscarta_database`.`reservas_temporales`.`abono` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[04-Oct-2025 01:11:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'total' for column `marinatourscarta_database`.`reservas_temporales`.`abono` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[04-Oct-2025 17:08:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'total' for column `marinatourscarta_database`.`reservas_temporales`.`abono` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[04-Oct-2025 17:15:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'total' for column `marinatourscarta_database`.`reservas_temporales`.`abono` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[06-Oct-2025 23:03:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'total' for column `marinatourscarta_database`.`reservas_temporales`.`abono` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[06-Oct-2025 23:04:13 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'total' for column `marinatourscarta_database`.`reservas_temporales`.`abono` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[06-Oct-2025 23:08:45 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'total' for column `marinatourscarta_database`.`reservas_temporales`.`abono` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[06-Oct-2025 23:08:57 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'total' for column `marinatourscarta_database`.`reservas_temporales`.`abono` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[06-Oct-2025 23:09:04 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'total' for column `marinatourscarta_database`.`reservas_temporales`.`abono` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[06-Oct-2025 23:09:24 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'total' for column `marinatourscarta_database`.`reservas_temporales`.`abono` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[06-Oct-2025 23:19:07 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'total' for column `marinatourscarta_database`.`reservas_temporales`.`abono` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[06-Oct-2025 23:19:51 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'total' for column `marinatourscarta_database`.`reservas_temporales`.`abono` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[06-Oct-2025 23:19:58 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'total' for column `marinatourscarta_database`.`reservas_temporales`.`abono` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[06-Oct-2025 23:20:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'total' for column `marinatourscarta_database`.`reservas_temporales`.`abono` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[06-Oct-2025 23:20:14 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'total' for column `marinatourscarta_database`.`reservas_temporales`.`abono` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[06-Oct-2025 23:21:48 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'total' for column `marinatourscarta_database`.`reservas_temporales`.`abono` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[11-Oct-2025 21:10:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: 'MARINA TOURS' for column `marinatourscarta_database`.`reservas_temporales`.`id_usuario` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[11-Oct-2025 21:12:24 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: 'MARINA TOURS' for column `marinatourscarta_database`.`reservas_temporales`.`id_usuario` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[11-Oct-2025 21:12:31 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: 'MARINA TOURS' for column `marinatourscarta_database`.`reservas_temporales`.`id_usuario` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[11-Oct-2025 21:12:58 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: 'MARINA TOURS' for column `marinatourscarta_database`.`reservas_temporales`.`id_usuario` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[11-Oct-2025 21:14:15 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: 'MARINA TOURS' for column `marinatourscarta_database`.`reservas_temporales`.`id_usuario` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[11-Oct-2025 21:14:19 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: 'MARINA TOURS' for column `marinatourscarta_database`.`reservas_temporales`.`id_usuario` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[11-Oct-2025 21:17:48 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: 'MARINA TOURS' for column `marinatourscarta_database`.`reservas_temporales`.`id_usuario` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[11-Oct-2025 21:18:26 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: 'MARINA TOURS' for column `marinatourscarta_database`.`reservas_temporales`.`id_usuario` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[11-Oct-2025 21:18:28 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: 'MARINA TOURS' for column `marinatourscarta_database`.`reservas_temporales`.`id_usuario` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[11-Oct-2025 21:18:35 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: 'MARINA TOURS' for column `marinatourscarta_database`.`reservas_temporales`.`id_usuario` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[12-Oct-2025 01:56:33 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: 'jo' for column `marinatourscarta_database`.`reservas_temporales`.`id_usuario` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[12-Oct-2025 01:57:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: 'jo' for column `marinatourscarta_database`.`reservas_temporales`.`id_usuario` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[12-Oct-2025 02:02:46 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: 'jo' for column `marinatourscarta_database`.`reservas_temporales`.`id_usuario` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[12-Oct-2025 02:03:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: 'jo' for column `marinatourscarta_database`.`reservas_temporales`.`id_usuario` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[12-Oct-2025 02:04:00 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: 'jo' for column `marinatourscarta_database`.`reservas_temporales`.`id_usuario` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[12-Oct-2025 02:04:41 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: 'jo' for column `marinatourscarta_database`.`reservas_temporales`.`id_usuario` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[12-Oct-2025 02:05:47 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: 'jo' for column `marinatourscarta_database`.`reservas_temporales`.`id_usuario` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[01-Nov-2025 19:12:59 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[01-Nov-2025 19:12:59 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[01-Nov-2025 19:13:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method ControladorReservas::ctrBuscarReservaPorCodigo() in /home/marinatourscarta/public_html/api/notificacion.php:46
+Stack trace:
+#0 {main}
+  thrown in /home/marinatourscarta/public_html/api/notificacion.php on line 46
+[02-Nov-2025 20:31:26 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[02-Nov-2025 20:31:26 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[02-Nov-2025 23:24:58 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[02-Nov-2025 23:29:06 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[02-Nov-2025 23:29:15 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[03-Nov-2025 13:07:50 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'QV1RTABP3' for key 'codigo_reserva' in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[03-Nov-2025 20:30:21 UTC] {
+  "status": 502,
+  "message": "Bad Gateway"
+}
+
+[04-Nov-2025 16:42:15 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[04-Nov-2025 16:42:15 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[04-Nov-2025 16:42:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method ControladorReservas::ctrBuscarReservaPorCodigo() in /home/marinatourscarta/public_html/api/notificacion.php:46
+Stack trace:
+#0 {main}
+  thrown in /home/marinatourscarta/public_html/api/notificacion.php on line 46
+[04-Nov-2025 21:17:47 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[04-Nov-2025 21:21:12 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[04-Nov-2025 21:21:28 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[04-Nov-2025 21:22:29 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[05-Nov-2025 18:05:46 UTC] {"message":"currency_id invalid","error":"invalid_items","status":400,"cause":null}
+[05-Nov-2025 22:42:58 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[05-Nov-2025 22:42:58 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[06-Nov-2025 00:02:14 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[06-Nov-2025 00:02:50 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[07-Nov-2025 02:12:55 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[07-Nov-2025 02:15:34 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[07-Nov-2025 02:15:40 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[07-Nov-2025 02:17:30 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[07-Nov-2025 15:16:15 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[07-Nov-2025 15:16:25 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[07-Nov-2025 15:19:07 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[07-Nov-2025 15:19:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[07-Nov-2025 15:19:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method ControladorReservas::ctrBuscarReservaPorCodigo() in /home/marinatourscarta/public_html/api/notificacion.php:46
+Stack trace:
+#0 {main}
+  thrown in /home/marinatourscarta/public_html/api/notificacion.php on line 46
+[07-Nov-2025 18:13:33 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[07-Nov-2025 18:13:33 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[07-Nov-2025 20:07:22 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[07-Nov-2025 20:07:22 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[07-Nov-2025 20:07:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method ControladorReservas::ctrBuscarReservaPorCodigo() in /home/marinatourscarta/public_html/api/notificacion.php:46
+Stack trace:
+#0 {main}
+  thrown in /home/marinatourscarta/public_html/api/notificacion.php on line 46
+[07-Nov-2025 20:17:24 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[07-Nov-2025 20:17:24 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[07-Nov-2025 20:26:23 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[07-Nov-2025 20:26:23 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[07-Nov-2025 20:31:28 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[07-Nov-2025 20:31:28 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[07-Nov-2025 20:37:01 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[07-Nov-2025 20:37:01 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[07-Nov-2025 20:44:41 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[07-Nov-2025 20:44:41 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[07-Nov-2025 20:51:41 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[07-Nov-2025 20:51:41 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[08-Nov-2025 14:30:59 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[08-Nov-2025 14:30:59 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[08-Nov-2025 14:31:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method ControladorReservas::ctrBuscarReservaPorCodigo() in /home/marinatourscarta/public_html/api/notificacion.php:46
+Stack trace:
+#0 {main}
+  thrown in /home/marinatourscarta/public_html/api/notificacion.php on line 46
+[08-Nov-2025 14:38:08 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[08-Nov-2025 14:38:08 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[08-Nov-2025 14:38:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method ControladorReservas::ctrBuscarReservaPorCodigo() in /home/marinatourscarta/public_html/api/notificacion.php:46
+Stack trace:
+#0 {main}
+  thrown in /home/marinatourscarta/public_html/api/notificacion.php on line 46
+[09-Nov-2025 00:09:08 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[09-Nov-2025 00:09:08 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[09-Nov-2025 00:23:51 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[09-Nov-2025 00:23:51 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[09-Nov-2025 14:20:48 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[09-Nov-2025 14:20:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[09-Nov-2025 16:18:17 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[09-Nov-2025 16:18:17 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[09-Nov-2025 19:31:07 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[09-Nov-2025 19:36:56 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[09-Nov-2025 19:39:12 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[09-Nov-2025 19:39:19 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[09-Nov-2025 19:39:26 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[10-Nov-2025 01:55:50 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[10-Nov-2025 01:55:50 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[10-Nov-2025 01:59:50 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[10-Nov-2025 01:59:50 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[10-Nov-2025 14:22:43 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[10-Nov-2025 14:24:37 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[10-Nov-2025 14:24:43 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[10-Nov-2025 19:25:36 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[10-Nov-2025 19:25:36 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[10-Nov-2025 19:30:01 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[10-Nov-2025 19:30:01 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[10-Nov-2025 21:20:40 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[10-Nov-2025 21:20:40 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[10-Nov-2025 22:21:18 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[10-Nov-2025 22:23:56 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[10-Nov-2025 22:25:00 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[10-Nov-2025 23:08:48 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[10-Nov-2025 23:08:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[11-Nov-2025 01:26:32 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[11-Nov-2025 01:26:32 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[11-Nov-2025 01:36:26 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[11-Nov-2025 01:36:26 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[11-Nov-2025 16:45:04 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[11-Nov-2025 16:45:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[11-Nov-2025 16:52:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[11-Nov-2025 16:53:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[11-Nov-2025 16:53:46 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[11-Nov-2025 21:33:01 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[12-Nov-2025 16:38:19 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[12-Nov-2025 16:38:19 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[12-Nov-2025 17:23:55 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[12-Nov-2025 17:24:15 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[14-Nov-2025 15:35:12 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[14-Nov-2025 15:35:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[14-Nov-2025 15:35:17 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method ControladorReservas::ctrBuscarReservaPorCodigo() in /home/marinatourscarta/public_html/api/notificacion.php:46
+Stack trace:
+#0 {main}
+  thrown in /home/marinatourscarta/public_html/api/notificacion.php on line 46
+[14-Nov-2025 15:40:05 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[14-Nov-2025 15:40:05 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[15-Nov-2025 00:47:18 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[15-Nov-2025 00:47:18 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[15-Nov-2025 00:53:04 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[15-Nov-2025 00:53:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[16-Nov-2025 18:01:53 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[16-Nov-2025 18:01:53 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[17-Nov-2025 12:01:51 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[17-Nov-2025 12:01:51 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[17-Nov-2025 12:19:15 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[17-Nov-2025 12:19:15 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[17-Nov-2025 15:10:23 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[17-Nov-2025 15:10:23 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[17-Nov-2025 18:48:29 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[17-Nov-2025 18:48:29 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[17-Nov-2025 18:56:06 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[17-Nov-2025 18:56:06 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[17-Nov-2025 20:32:34 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[17-Nov-2025 20:32:34 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[17-Nov-2025 20:32:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method ControladorReservas::ctrBuscarReservaPorCodigo() in /home/marinatourscarta/public_html/api/notificacion.php:46
+Stack trace:
+#0 {main}
+  thrown in /home/marinatourscarta/public_html/api/notificacion.php on line 46
+[18-Nov-2025 15:05:37 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[18-Nov-2025 15:05:37 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[18-Nov-2025 15:10:58 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[18-Nov-2025 15:10:58 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[18-Nov-2025 16:28:01 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[18-Nov-2025 16:28:01 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[18-Nov-2025 16:28:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method ControladorReservas::ctrBuscarReservaPorCodigo() in /home/marinatourscarta/public_html/api/notificacion.php:46
+Stack trace:
+#0 {main}
+  thrown in /home/marinatourscarta/public_html/api/notificacion.php on line 46
+[18-Nov-2025 17:51:41 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[18-Nov-2025 17:51:41 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[18-Nov-2025 21:22:00 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[18-Nov-2025 21:29:16 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[19-Nov-2025 20:17:00 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[20-Nov-2025 16:22:42 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[20-Nov-2025 16:22:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[20-Nov-2025 16:22:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method ControladorReservas::ctrBuscarReservaPorCodigo() in /home/marinatourscarta/public_html/api/notificacion.php:46
+Stack trace:
+#0 {main}
+  thrown in /home/marinatourscarta/public_html/api/notificacion.php on line 46
+[20-Nov-2025 17:18:01 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[20-Nov-2025 17:18:01 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[20-Nov-2025 22:19:36 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[20-Nov-2025 22:19:36 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[20-Nov-2025 22:19:36 UTC] {"message":"transaction_amount attribute can't be null","error":"bad_request","status":400,"cause":[{"code":4002,"description":"transaction_amount attribute can't be null","data":"20-11-2025T22:19:36UTC;750bc75e-4565-423c-903d-1740b39ed22f"}]}
+[20-Nov-2025 22:25:05 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[20-Nov-2025 22:25:05 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[20-Nov-2025 22:25:06 UTC] {"message":"transaction_amount attribute can't be null","error":"bad_request","status":400,"cause":[{"code":4002,"description":"transaction_amount attribute can't be null","data":"20-11-2025T22:25:06UTC;82f567fd-9e5c-4fd0-ba36-7aa163c94339"}]}
+[21-Nov-2025 13:43:07 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[21-Nov-2025 13:43:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[21-Nov-2025 16:21:33 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[21-Nov-2025 16:21:33 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[21-Nov-2025 16:29:53 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[21-Nov-2025 16:29:53 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[21-Nov-2025 17:43:33 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[21-Nov-2025 17:43:33 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[21-Nov-2025 17:48:57 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[21-Nov-2025 17:48:57 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[21-Nov-2025 17:57:08 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[21-Nov-2025 17:57:08 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[21-Nov-2025 19:11:23 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[21-Nov-2025 19:11:44 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[21-Nov-2025 19:11:57 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[21-Nov-2025 19:13:06 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[21-Nov-2025 19:13:25 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[21-Nov-2025 19:13:54 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[21-Nov-2025 19:14:23 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[21-Nov-2025 19:15:49 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[22-Nov-2025 17:40:52 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[22-Nov-2025 17:40:52 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[22-Nov-2025 17:40:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method ControladorReservas::ctrBuscarReservaPorCodigo() in /home/marinatourscarta/public_html/api/notificacion.php:46
+Stack trace:
+#0 {main}
+  thrown in /home/marinatourscarta/public_html/api/notificacion.php on line 46
+[22-Nov-2025 18:14:21 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[22-Nov-2025 18:16:17 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[22-Nov-2025 18:16:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[22-Nov-2025 18:18:37 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[22-Nov-2025 21:04:26 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[22-Nov-2025 21:04:26 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[23-Nov-2025 19:04:29 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[23-Nov-2025 19:04:29 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[23-Nov-2025 19:04:33 UTC] PHP Warning:  Undefined array key "acompañantes" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 206
+[23-Nov-2025 19:04:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method ControladorReservas::ctrBuscarReservaPorCodigo() in /home/marinatourscarta/public_html/api/notificacion.php:46
+Stack trace:
+#0 {main}
+  thrown in /home/marinatourscarta/public_html/api/notificacion.php on line 46
+[24-Nov-2025 21:43:51 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[24-Nov-2025 21:43:51 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[24-Nov-2025 21:43:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method ControladorReservas::ctrBuscarReservaPorCodigo() in /home/marinatourscarta/public_html/api/notificacion.php:46
+Stack trace:
+#0 {main}
+  thrown in /home/marinatourscarta/public_html/api/notificacion.php on line 46
+[25-Nov-2025 00:42:46 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[25-Nov-2025 00:42:46 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[25-Nov-2025 00:52:55 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[25-Nov-2025 00:52:55 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[25-Nov-2025 16:08:47 UTC] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 458
+[25-Nov-2025 16:08:47 UTC] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 459
+[25-Nov-2025 16:09:21 UTC] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 458
+[25-Nov-2025 16:09:21 UTC] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 459
+[25-Nov-2025 16:09:24 UTC] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 458
+[25-Nov-2025 16:09:24 UTC] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 459
+[25-Nov-2025 17:52:28 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[25-Nov-2025 17:52:36 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[25-Nov-2025 17:52:45 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[25-Nov-2025 17:53:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[25-Nov-2025 17:53:11 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[25-Nov-2025 17:55:36 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[27-Nov-2025 22:16:28 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[27-Nov-2025 22:16:28 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[27-Nov-2025 22:20:36 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[27-Nov-2025 22:20:36 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[27-Nov-2025 22:26:19 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[27-Nov-2025 22:26:19 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[27-Nov-2025 22:40:37 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[27-Nov-2025 22:40:37 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[27-Nov-2025 23:14:47 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[27-Nov-2025 23:14:47 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[28-Nov-2025 01:47:52 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[28-Nov-2025 01:47:52 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[28-Nov-2025 15:51:32 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[28-Nov-2025 15:51:32 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[28-Nov-2025 19:00:49 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[28-Nov-2025 19:00:49 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[28-Nov-2025 19:00:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method ControladorReservas::ctrBuscarReservaPorCodigo() in /home/marinatourscarta/public_html/api/notificacion.php:46
+Stack trace:
+#0 {main}
+  thrown in /home/marinatourscarta/public_html/api/notificacion.php on line 46
+[28-Nov-2025 19:24:32 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[28-Nov-2025 19:24:32 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[28-Nov-2025 19:24:37 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method ControladorReservas::ctrBuscarReservaPorCodigo() in /home/marinatourscarta/public_html/api/notificacion.php:46
+Stack trace:
+#0 {main}
+  thrown in /home/marinatourscarta/public_html/api/notificacion.php on line 46
+[28-Nov-2025 21:51:53 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[28-Nov-2025 21:51:53 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[28-Nov-2025 22:38:29 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[28-Nov-2025 22:38:29 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[29-Nov-2025 00:01:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[29-Nov-2025 00:05:26 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[29-Nov-2025 00:07:47 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[29-Nov-2025 00:07:53 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[29-Nov-2025 01:19:28 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[29-Nov-2025 01:19:50 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[29-Nov-2025 01:20:01 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'nopago' for column `marinatourscarta_database`.`reservas_temporales`.`pagoCuotas` at row 1 in /home/marinatourscarta/public_html/modelos/reservas.modelo.php:484
+Stack trace:
+#0 /home/marinatourscarta/public_html/modelos/reservas.modelo.php(484): PDOStatement->execute()
+#1 /home/marinatourscarta/public_html/controladores/reservas.controlador.php(417): ModeloReservas::mdlGuardarReservaTemporal(Array)
+#2 /home/marinatourscarta/public_html/api/crear_preferencia.php(64): ControladorReservas::ctrGuardarReservaTemporal(Array)
+#3 {main}
+  thrown in /home/marinatourscarta/public_html/modelos/reservas.modelo.php on line 484
+[29-Nov-2025 04:40:49 UTC] PHP Warning:  Undefined array key "transaction_details" in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[29-Nov-2025 04:40:49 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/marinatourscarta/public_html/api/procesar_pago.php on line 106
+[29-Nov-2025 04:40:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method ControladorReservas::ctrBuscarReservaPorCodigo() in /home/marinatourscarta/public_html/api/notificacion.php:46
+Stack trace:
+#0 {main}
+  thrown in /home/marinatourscarta/public_html/api/notificacion.php on line 46

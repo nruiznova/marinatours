@@ -1,0 +1,1 @@
+[26-Nov-2025 21:58:29 UTC] PHP Warning:  unlink(/home/marinatourscarta/public_html/ajax/../extensiones/reserva_MGVKT7YQX.pdf): No such file or directory in /home/marinatourscarta/public_html/ajax/enviar_pdf.ajax.php on line 242
