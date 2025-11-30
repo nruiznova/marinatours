@@ -1,5 +1,9 @@
 <?php
 
+// Suprimir warnings que contaminan el JSON
+error_reporting(E_ERROR | E_PARSE);
+ini_set('display_errors', 0);
+
 require_once "../controladores/reservas.controlador.php";
 require_once "../modelos/reservas.modelo.php";
 require_once "../modelos/categorias.modelo.php";
@@ -68,22 +72,37 @@ class TablaReservas{
 
 			$info_habitacion = ControladorHabitaciones::ctrMostrarHabitaciones($value["id_habitacion"]);
 
-			$desc = $value["descripcion_reserva"];
+			// Validar que la habitación existe
+			if($info_habitacion === false || empty($info_habitacion)){
+				continue; // Saltar reservas con habitaciones inválidas
+			}
 
+			$desc = $value["descripcion_reserva"];
 			$descArr = explode("-", $desc);
 
-			$personasArr = explode(" ", $descArr[1]);
+			// Extraer número de personas de manera segura
+			$personas = 0;
+			if(preg_match('/(\d+)\s*persona/i', $value["descripcion_reserva"], $matches)){
+				$personas = $matches[1];
+			}
 
-			$galeria = json_decode($info_habitacion["galeria"], true);
-
-			$imgHabitacion = ControladorRuta::ctrRutaBackend().$galeria[0];
+			// Validar y decodificar galería
+			$galeria = array();
+			if(!empty($info_habitacion["galeria"])){
+				$decoded = json_decode($info_habitacion["galeria"], true);
+				if(is_array($decoded)){
+					$galeria = $decoded;
+				}
+			}
+			
+			$imgHabitacion = !empty($galeria[0]) ? ControladorRuta::ctrRutaBackend().$galeria[0] : '';
 			$infoHabitacion = $value["descripcion_reserva"];
 			$pagoReserva = $value["pago_reserva"];
 			$pagoActual = "";
 			$codigoReserva = $value["codigo_reserva"];
 			$fecha = $value["fecha_ingreso"];
 			$plan = "";
-			$personas = $personasArr[1];
+			// $personas ya está definido arriba
 			$firstName = $value["firstName"];
 			$lastName = $value["lastName"];
 			$tipo_identificacion = $value["tipo_identificacion"];
@@ -96,6 +115,10 @@ class TablaReservas{
 			$montoPagar = $value["montoPagar"];
 			$valorCuotas = $value["valorCuotas"];
 			$pagoCuotas = $value["pagoCuotas"];
+
+			// Validar que info_habitacion tenga la propiedad 'ruta'
+			$ruta_habitacion = isset($info_habitacion["ruta"]) ? $info_habitacion["ruta"] : '';
+			$id_habitacion_info = isset($info_habitacion["id"]) ? $info_habitacion["id"] : '';
 
 			$estado = '';
 
@@ -112,7 +135,7 @@ class TablaReservas{
 
 					// <button class='btn btn-danger btn-sm eliminarReserva' idReserva='".$value["id_reserva"]."'><i class='p-1 fas fa-trash-alt'></i></button>
 
-					$acciones = "<div class='btn-group'><button class='btn btn-warning btn-sm editarReserva' personas='".$personas."' ruta='".$info_habitacion["ruta"]."' data-toggle='modal' data-target='#editarReserva' idReserva='".$value["id_reserva"]."' idHabitacion='".$value["id_habitacion"]."' fechaIngreso='".date("d-m-Y", strtotime($value["fecha_ingreso"]))."' fechaSalida='".date("d-m-Y", strtotime($value["fecha_ingreso"]))."' descripcion='".$value["descripcion_reserva"]."' diasReserva='".$dias."'><i class='p-1 fas fa-pencil-alt text-white'></i></button>".$button_eliminar."</div>";	
+					$acciones = "<div class='btn-group'><button class='btn btn-warning btn-sm editarReserva' personas='".$personas."' ruta='".$ruta_habitacion."' data-toggle='modal' data-target='#editarReserva' idReserva='".$value["id_reserva"]."' idHabitacion='".$value["id_habitacion"]."' fechaIngreso='".date("d-m-Y", strtotime($value["fecha_ingreso"]))."' fechaSalida='".date("d-m-Y", strtotime($value["fecha_ingreso"]))."' descripcion='".$value["descripcion_reserva"]."' diasReserva='".$dias."'><i class='p-1 fas fa-pencil-alt text-white'></i></button>".$button_eliminar."</div>";	
 
 				}else{ 
 
@@ -120,7 +143,7 @@ class TablaReservas{
 
 					// <button class='btn btn-danger btn-sm eliminarReserva' idReserva='".$value["id_reserva"]."'><i class='p-1 fas fa-trash-alt'></i></button>
 
-					$acciones = "<div class='btn-group'><button type='button' data-toggle='modal' data-target='#registrarPago' class='btn btn-secondary btnPagoReserva' idReserva='".$value["id_reserva"]."' idHabitacion='".$value["id_habitacion"]."' data='".ControladorRuta::ctrRuta()."index.php?addPayment=true&idHabitacion=".$info_habitacion["id"]."&imgHabitacion=".$imgHabitacion."&infoHabitacion=".$infoHabitacion."&pagoReserva=".$pagoReserva."&pagoActual=".$pagoActual."&idReserva=".$value["id_reserva"]."&codigoReserva=".$codigoReserva."&fechaIngreso=".$fecha."&fechaSalida=".$fecha."&plan=".$plan."&personas=".$personas."&firstName=".$firstName."&lastName=".$lastName."&tipo_identificacion=".$tipo_identificacion."&numero_identificacion=".$numero_identificacion."&celular=".$celular."&correo=".$correo."&hospedaje=".$hospedaje."&abono=".$abono."&cuotas=".$cuotas."&montoPagar=".$montoPagar."&valorCuotas=".$valorCuotas."&pagoCuotas=".$pagoCuotas."'><i class='fas fa-receipt'></i></button><button class='btn btn-warning btn-sm editarReserva' personas='".$personas."' ruta='".$info_habitacion["ruta"]."' data-toggle='modal' data-target='#editarReserva' idReserva='".$value["id_reserva"]."' idHabitacion='".$value["id_habitacion"]."' fechaIngreso='".date("d-m-Y", strtotime($value["fecha_ingreso"]))."' fechaSalida='".date("d-m-Y", strtotime($value["fecha_ingreso"]))."' descripcion='".$value["descripcion_reserva"]."' diasReserva='".$dias."'><i class='p-1 fas fa-pencil-alt text-white'></i></button>".$button_eliminar."</div>";	
+					$acciones = "<div class='btn-group'><button type='button' data-toggle='modal' data-target='#registrarPago' class='btn btn-secondary btnPagoReserva' idReserva='".$value["id_reserva"]."' idHabitacion='".$value["id_habitacion"]."' data='".ControladorRuta::ctrRuta()."index.php?addPayment=true&idHabitacion=".$id_habitacion_info."&imgHabitacion=".$imgHabitacion."&infoHabitacion=".$infoHabitacion."&pagoReserva=".$pagoReserva."&pagoActual=".$pagoActual."&idReserva=".$value["id_reserva"]."&codigoReserva=".$codigoReserva."&fechaIngreso=".$fecha."&fechaSalida=".$fecha."&plan=".$plan."&personas=".$personas."&firstName=".$firstName."&lastName=".$lastName."&tipo_identificacion=".$tipo_identificacion."&numero_identificacion=".$numero_identificacion."&celular=".$celular."&correo=".$correo."&hospedaje=".$hospedaje."&abono=".$abono."&cuotas=".$cuotas."&montoPagar=".$montoPagar."&valorCuotas=".$valorCuotas."&pagoCuotas=".$pagoCuotas."'><i class='fas fa-receipt'></i></button><button class='btn btn-warning btn-sm editarReserva' personas='".$personas."' ruta='".$ruta_habitacion."' data-toggle='modal' data-target='#editarReserva' idReserva='".$value["id_reserva"]."' idHabitacion='".$value["id_habitacion"]."' fechaIngreso='".date("d-m-Y", strtotime($value["fecha_ingreso"]))."' fechaSalida='".date("d-m-Y", strtotime($value["fecha_ingreso"]))."' descripcion='".$value["descripcion_reserva"]."' diasReserva='".$dias."'><i class='p-1 fas fa-pencil-alt text-white'></i></button>".$button_eliminar."</div>";	
 
 				}
 				
