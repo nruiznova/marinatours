@@ -1,8 +1,14 @@
 <?php
 
+// Limpiar cualquier output previo
+ob_start();
+
 // Suprimir warnings que contaminan el JSON
-error_reporting(E_ERROR | E_PARSE);
+error_reporting(0);
 ini_set('display_errors', 0);
+
+// Establecer header JSON
+header('Content-Type: application/json; charset=utf-8');
 
 require_once "../controladores/reservas.controlador.php";
 require_once "../modelos/reservas.modelo.php";
@@ -13,6 +19,19 @@ require_once "../controladores/ruta.controlador.php";
 require_once "../modelos/habitaciones.modelo.php";
 
 class TablaReservas{
+
+	/*=============================================
+	Función para sanitizar strings en JSON
+	=============================================*/
+	private function sanitizeForJson($str){
+		// Escapar comillas y caracteres especiales
+		$str = str_replace('\\', '\\\\', $str);
+		$str = str_replace('"', '\\"', $str);
+		$str = str_replace("\n", '\\n', $str);
+		$str = str_replace("\r", '\\r', $str);
+		$str = str_replace("\t", '\\t', $str);
+		return $str;
+	}
 
 	/*=============================================
 	Tabla Reservas
@@ -52,17 +71,15 @@ class TablaReservas{
 
 		if(count($reservas)== 0){
 
- 			$datosJson = '{"data": []}';
-
+ 			$datosJson = json_encode(array("data" => array()));
+			ob_end_clean();
 			echo $datosJson;
-
-			return;
+			exit();
 
  		}
 
- 		$datosJson = '{
-
-	 	"data": [ '; 
+ 		// Crear array para almacenar los datos
+ 		$data = array(); 
 
 	 	foreach ($reservas as $key => $value) {
 			
@@ -347,41 +364,45 @@ class TablaReservas{
 				$fechaIng = date("d-m-Y", strtotime($value["fecha_ingreso"]));
 			}
 
-			$datosJson.= '[
-								
-						"'.$acciones.'",
-						"'.$estado.'",	
-						"'.$value["hospedaje"].'",
-						"'.$cliente.'",
-						"'.$value["celular"].'",
-						"'.$adultos.'",
-						"'.$niños.'",
-						"$ '.number_format($value["pago_reserva"]).'",
-						"'.$saldo.'",						
-						"'.$descArr[0].'",
-						"'.$vendedor.'",						
-						"'.$value["codigo_reserva"].'",
-						"'.$fechaIng.'",
-						"$ '.number_format($pagado_metodo_1).'",
-						"$ '.number_format($pagado_metodo_2).'",
-						"$ '.number_format($pagado_metodo_3).'",
-						"$ '.number_format($pagado_metodo_4).'",
-						"$ '.number_format($pagado_metodo_5).'",
-						"$ '.number_format($pagado_metodo_6).'",
-						"$ '.number_format($pagado_metodo_7).'",
-						"$ '.number_format($pagado_metodo_8).'"
-																
-				],';
+			// No es necesario sanitizar si usamos json_encode
+			// $acciones = $this->sanitizeForJson($acciones);
+			// $estado = $this->sanitizeForJson($estado);
+			// $saldo = $this->sanitizeForJson($saldo);
+
+			// Agregar fila al array
+			$data[] = array(
+				$acciones,
+				$estado,
+				$value["hospedaje"],
+				$cliente,
+				$value["celular"],
+				$adultos,
+				$niños,
+				"$ ".number_format($value["pago_reserva"]),
+				$saldo,
+				$descArr[0],
+				$vendedor,
+				$value["codigo_reserva"],
+				$fechaIng,
+				"$ ".number_format($pagado_metodo_1),
+				"$ ".number_format($pagado_metodo_2),
+				"$ ".number_format($pagado_metodo_3),
+				"$ ".number_format($pagado_metodo_4),
+				"$ ".number_format($pagado_metodo_5),
+				"$ ".number_format($pagado_metodo_6),
+				"$ ".number_format($pagado_metodo_7),
+				"$ ".number_format($pagado_metodo_8)
+			);
 
 		}
 
-		$datosJson = substr($datosJson, 0, -1);
+		// Codificar como JSON usando la función nativa de PHP
+		$datosJson = json_encode(array("data" => $data), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
 
-		$datosJson.=  ']
-
-		}';
-
+		// Limpiar cualquier output previo y enviar solo JSON
+		ob_end_clean();
 		echo $datosJson;
+		exit();
 
 	}
 
