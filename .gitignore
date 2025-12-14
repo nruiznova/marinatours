@@ -1,7 +1,13 @@
 # ==========================================
 # ARCHIVOS DE CONFIGURACIÓN SENSIBLES
 # ==========================================
-# NUNCA subir archivos con contraseñas o credenciales
+# NOTA: Estos archivos YA fueron subidos una vez con las URLs
+# Ahora Git ignorará cambios futuros (como contraseñas actualizadas)
+# Para dejar de rastrear cambios futuros, ejecutar después del primer push:
+# git update-index --assume-unchanged config.local.php
+# git update-index --assume-unchanged config.prod.php
+
+# Los archivos seguirán en el repo, pero Git ignorará modificaciones locales
 config.local.php
 config.prod.php
 

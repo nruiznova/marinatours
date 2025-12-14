@@ -403,12 +403,24 @@ Class ModeloReservas{
 			return ['error' => 'Servicio no encontrado'];
 		}
 	
-		$cupos = (int)$servicio['cupos'];
+		$cuposBase = (int)$servicio['cupos'];
 		$serviciosRelacionados = explode(";", $servicio['serviciosEnlazados']);
 		$serviciosRelacionados[] = $idServicio;
 		$serviciosRelacionados = array_unique($serviciosRelacionados);
+		
+		// 2. Verificar si hay cupos ajustados para esta fecha
+		// Ordenar los servicios relacionados para formar la clave de búsqueda
+		sort($serviciosRelacionados);
+		$serviciosClave = implode(";", $serviciosRelacionados);
+		
+		$stmtCupos = $pdo->prepare("SELECT cupos FROM cupos WHERE servicios = ? AND fecha = ?");
+		$stmtCupos->execute([$serviciosClave, $fecha]);
+		$cuposAjustados = $stmtCupos->fetch(PDO::FETCH_ASSOC);
+		
+		// Si hay cupos ajustados para esta fecha, usar esos; si no, usar los cupos base
+		$cupos = $cuposAjustados ? (int)$cuposAjustados['cupos'] : $cuposBase;
 	
-		// 2. Obtener todas las reservas para esos servicios en la fecha
+		// 3. Obtener todas las reservas para esos servicios en la fecha
 		$inQuery = implode(',', array_fill(0, count($serviciosRelacionados), '?'));
 		$stmtRes = $pdo->prepare("SELECT descripcion_reserva FROM reservas WHERE id_habitacion IN ($inQuery) AND fecha_ingreso = ?");
 		$stmtRes->execute(array_merge($serviciosRelacionados, [$fecha]));

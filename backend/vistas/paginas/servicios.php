@@ -74,7 +74,6 @@ $eliminarTemporada -> ctrEliminarPrecioTemporada();
             <div class="card-header pl-2 pl-sm-3">
           
               <a href="servicios" class="btn btn-primary btn-sm">Agregar nuevo servicio</a>
-              <br><a href="#" class="btn btn-secondary btn-sm mt-1" data-toggle="modal" data-target="#modalAjustarCupos">Ajustar cupos disponibles por fecha</a>
               <br><a href="#" class="btn btn-info btn-sm mt-1" data-toggle="modal" data-target="#modalPreciosTemporada">Gestionar precios por temporada</a>
 
               <div class="card-tools">
@@ -1044,123 +1043,6 @@ $eliminarTemporada -> ctrEliminarPrecioTemporada();
   </section>
   <!-- /.content -->
 
-</div>
-
-<!-- Modal -->
-<div class="modal fade" id="modalAjustarCupos" tabindex="-1" role="dialog" aria-labelledby="modalAjustarCuposLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header bg-secondary">
-        <h5 class="modal-title" id="modalAjustarCuposLabel">Ajustar cupos disponibles por fecha</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="table-responsive">
-            <table class="table table-sm table-bordered">
-                <tbody>
-                  <tr>
-                    <th style="width: 50%">Servicios</th>
-                    <td colspan="2">
-                      <!-- <div class="form-group"> -->
-                        <!-- <label for="exampleFormControlSelect1">Example select</label> -->
-                        <select class="form-control" id="servicioCuposModal">
-
-                            <option value="">-- Seleccione --</option>
-
-                            <?php
-                            
-                              $servicios = ControladorHabitaciones::ctrMostrarHabitaciones(null);
-
-                              $servicios_enlazados = [];
-
-                              foreach ($servicios as $key => $value) {
-                                
-                                $enlazados = $value["serviciosEnlazados"];
-
-                                $enlazados .= ";".$value["id_h"];
-
-                                $enlazados_arr = explode(";", $enlazados);
-
-                                sort($enlazados_arr);
-
-                                $enlazados_str = implode(";", $enlazados_arr);
-
-                                array_push($servicios_enlazados, $enlazados_str);
-
-                              }         
-                              
-                              $agrupaciones = array_unique($servicios_enlazados);
-
-                              $new_array = array_values($agrupaciones);
-
-                              // var_dump($new_array);         
-                              
-                              // recorrer agrupaciones
-                              
-                              for ($i=0; $i < count($new_array); $i++) { 
-
-                                  $items = explode(";", $new_array[$i]);
-
-                                  // recorrer servicios
-
-                                  $desc = '';
-
-                                  for ($j=0; $j < count($items); $j++) { 
-                                    
-                                    $item = ControladorHabitaciones::ctrMostrarHabitaciones($items[$j]);  
-                                  
-                                    $desc .= strtoupper($item["estilo"])." / ";
-
-                                  } 
-                                  
-                                  echo '<option value="'.$new_array[$i].'">'.$desc.'</option>';
-
-                              }                                                            
-                            
-                            ?>
-
-                        </select>
-                      <!-- </div> -->
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>Fecha</th>
-                    <td >
-                      <!-- <div class="form-group"> -->
-                        <!-- <label for="exampleInputPassword1">Password</label> -->
-                        <input type="date" class="form-control" id="fechaCuposModal" placeholder="">
-                      <!-- </div> -->
-                    </td>
-                    <td>
-                      <button type="button" class="btn btn-outline-secondary btn-block" id="consultarCuposModal">
-                        <i class="fas fa-search mr-2"></i> Consultar
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>Cupos</th>
-                    <td colspan="2">
-                      <!-- <div class="form-group"> -->
-                        <!-- <label for="test">Password</label> -->
-                        <input type="number" class="form-control" id="cuposModal" placeholder="Ingrese número de cupos" min="0" step="1">
-                      <!-- </div> -->
-                    </td>
-                  </tr>
-                </tbody>
-            </table>
-            <div class="alert alert-light border" role="alert" id="responseCuposModal" style="display:none;">
-              
-            </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary" id="submitCuposModal">Guardar</button>
-      </div>
-    </div>
-  </div>
 </div>
 
 <!-- Modal Precios por Temporada -->
