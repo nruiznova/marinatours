@@ -1,0 +1,79 @@
+# ==========================================
+# ARCHIVOS DE CONFIGURACIÓN SENSIBLES
+# ==========================================
+# NUNCA subir archivos con contraseñas o credenciales
+config.local.php
+config.prod.php
+
+# ==========================================
+# ARCHIVOS DE DEBUG Y DESARROLLO
+# ==========================================
+# Archivos temporales solo para debug local
+backend/ajax/debug_*.php
+backend/ajax/diagnostico_*.php
+backend/ajax/*_debug.ajax.php
+backend/ajax/debug_reservas.log
+
+# ==========================================
+# LOGS Y ARCHIVOS TEMPORALES
+# ==========================================
+error_log
+debug_reservas.log
+*.log
+*.tmp
+*.cache
+*.bak
+*.swp
+*~
+
+# ==========================================
+# DEPENDENCIAS Y VENDOR
+# ==========================================
+# Si usas Composer, no subir vendor (usar composer install en producción)
+# extensiones/vendor/
+# node_modules/
+
+# ==========================================
+# ARCHIVOS DEL SISTEMA OPERATIVO
+# ==========================================
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+# ==========================================
+# IDEs y EDITORES
+# ==========================================
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# PhpStorm
+.idea/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ==========================================
+# ARCHIVOS DE EJEMPLO (mantener en repo)
+# ==========================================
+# Los archivos .example SÍ deben subirse como plantilla
+# !config.local.example.php
+# !config.prod.example.php
+
+# ==========================================
+# OTROS
+# ==========================================
+# Archivos de backup de base de datos
+*.sql.gz
+*.sql.bak
+backup/

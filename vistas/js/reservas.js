@@ -1341,3 +1341,76 @@ function manejarRequired(id) {
     campo.required = visible;
   }
 }
+
+/*=============================================
+Actualizar precio según fecha seleccionada (temporadas)
+=============================================*/
+
+$('.datepicker.entrada').on('changeDate', function() {
+    actualizarPrecioPorFecha();
+});
+
+$('.datepicker.entrada').change(function() {
+    actualizarPrecioPorFecha();
+});
+
+function actualizarPrecioPorFecha() {
+    var idServicio = $('#idServicio').val();
+    var fechaReserva = $('.datepicker.entrada').val();
+    
+    if (!idServicio || !fechaReserva) {
+        return;
+    }
+    
+    // Convertir fecha de dd-mm-yyyy a yyyy-mm-dd
+    var partes = fechaReserva.split('-');
+    if (partes.length === 3) {
+        fechaReserva = partes[2] + '-' + partes[1] + '-' + partes[0];
+    }
+    
+    var datos = new FormData();
+    datos.append("id_servicio", idServicio);
+    datos.append("fecha_reserva", fechaReserva);
+    
+    $.ajax({
+        url: urlPrincipal + "ajax/habitaciones.ajax.php",
+        method: "POST",
+        data: datos,
+        cache: false,
+        contentType: false,
+        processData: false,
+        dataType: "json",
+        success: function(respuesta) {
+            if (respuesta && respuesta.visibilidad) {
+                // Actualizar precio adultos
+                var precio = parseInt(respuesta.precio);
+                var precioKids = parseInt(respuesta.precioKids);
+                
+                $('#precioActual').val(precio);
+                $('#precioKidsActual').val(precioKids);
+                $('#precioDisplay').html('COSTO $' + precio.toLocaleString('es-CO') + ' COP / POR PERSONA');
+                $('#precioKidsDisplay').html('** El precio para los <b>niños</b> con el rango de edad de 4-6 años es de <b>$' + precioKids.toLocaleString('es-CO') + ' COP</b>');
+                
+                // Actualizar el atributo unit del input de cantidad
+                $('[name="cantidad-personas"]').attr('unit', precio);
+                
+                // Mostrar u ocultar alerta de temporada
+                if (respuesta.temporada && respuesta.nombre_temporada) {
+                    if ($('#alertTemporada').length === 0) {
+                        $('<div class="alert alert-info mt-2 mb-2" id="alertTemporada"><i class="fas fa-calendar-alt"></i> <strong>Temporada activa:</strong> <span id="nombreTemporada"></span></div>').insertAfter('#precioDisplay');
+                    }
+                    $('#nombreTemporada').text(respuesta.nombre_temporada);
+                    $('#alertTemporada').show();
+                } else {
+                    $('#alertTemporada').hide();
+                }
+                
+                // Recalcular total si ya hay cantidad seleccionada
+                $('[name="cantidad-personas"]').trigger('change');
+            }
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.error('Error al obtener precio:', textStatus, errorThrown);
+        }
+    });
+}

@@ -63,54 +63,17 @@ if(!$habitacion){
     }
 
     
-	$precios = json_decode($habitacion["precio"], true);   	
-                
-	$visibilidad = "false";                                           
-
-	if(isset($_SESSION["validarSesion"]) && $_SESSION["validarSesion"] == "ok"){                                    
-
-		foreach ($precios as $row => $item) {
-			
-			if($_SESSION["nombre"] == $item["usuario"]){
-        
-				if($item["visibilidad"] == "true"){
-
-					$precio = $item["precio"];
-					$precioKids = $item["precioKids"];
-					$visibilidad = "true";
-
-				}else{
-
-					$visibilidad == "false";
-
-				}
-
-			}
-
-		}
-		
+	// Obtener precio considerando temporadas (fecha actual)
+	$precioData = ControladorPreciosTemporada::ctrObtenerPrecioUsuario($habitacion["id_h"], null, date('Y-m-d'));
+	
+	if($precioData && $precioData["visibilidad"]){
+		$precio = $precioData["precio"];
+		$precioKids = $precioData["precioKids"];
+		$visibilidad = "true";
+		$es_temporada = $precioData["temporada"];
+		$nombre_temporada = $precioData["nombre_temporada"];
 	}else{
-
-		foreach ($precios as $row => $item) {
-
-			if($item["usuario"] == "Público en general"){
-
-				if($item["visibilidad"] == "true"){
-
-					$precio = $item["precio"];
-					$precioKids = $item["precioKids"];
-					$visibilidad = "true";
-
-				}else{
-
-					$visibilidad == "false";
-
-				}
-
-			}
-
-		}
-
+		$visibilidad = "false";
 	}
 
 }
@@ -134,37 +97,40 @@ INFO HABITACIÓN
 
 			<?php 
 
-				$galeria = json_decode($habitacion["galeria"], true);
+			$galeria = json_decode($habitacion["galeria"], true);
 
-				foreach ($galeria as $row2 => $source) {
+			foreach ($galeria as $row2 => $source) {
 
-					$path = str_replace(" ","%20", $servidor.$source);
+				// Limpiar la ruta en caso de que venga con prefijo backend
+				$source = str_replace('../', '', $source);
+				$source = str_replace('backend/vistas/', 'vistas/', $source);
 
-					list($width, $height, $type, $attr) = getimagesize($path);
+				$path = str_replace(" ","%20", $servidor.$source);
 
-					// habilitar el if para solo permitir imagenes verticales
+				// Obtener dimensiones solo si es necesario, con control de errores
+				// list($width, $height, $type, $attr) = @getimagesize($path);
 
-					// if ($width < $height) { 
-					
-						if (strpos($source, "mp4") !== false): ?>
+				// habilitar el if para solo permitir imagenes verticales
 
-							<!-- tratar de mostrar los videos -->
+				// if ($width < $height) { 
+				
+					if (strpos($source, "mp4") !== false): ?>
 
-						<?php else: ?>
+						<!-- tratar de mostrar los videos -->
 
-							<div class="mySlides1">
+					<?php else: ?>
 
-							<div class="images-gallery" style="background-image: url('<?php echo $servidor.$source; ?>'); background-position: center; background-size: cover; width: 100%;"></div>
-								
-							</div>
+						<div class="mySlides1">
 
-						<?php endif; ?>
+						<div class="images-gallery" style="background-image: url('<?php echo $servidor.$source; ?>'); background-position: center; background-size: cover; width: 100%;"></div>
+							
+						</div>
 
-					<!-- // } -->
+					<?php endif; ?>
 
-				<?php } ?> 
+				<!-- // } -->
 
-			<!-- Next and previous buttons -->
+			<?php } ?>			<!-- Next and previous buttons -->
 			<a class="prev" onclick="plusSlides(-1, 0)"><i class="fas fa-chevron-left" style="color: #d6bd8d"></i></a>
 			<a class="next" onclick="plusSlides(1, 0)"><i class="fas fa-chevron-right" style="color: #d6bd8d"></i></a>	
 
@@ -184,8 +150,13 @@ INFO HABITACIÓN
 			<div class="p-3 container-info-servicio" style="border: 2px solid #d6bd8d; border-radius: 15px;">
 
 				<h1 class="title-main"><?php echo $habitacion["estilo"]; ?></h1>
-				<h2>COSTO $<?php echo number_format($precio); ?> COP / POR PERSONA</h2>				
-				<small class="text-muted">** El precio para los <b>niños</b> con el rango de edad de 4-6 años es de <b>$<?php echo number_format($precioKids); ?> COP</b></small>
+				<h2 id="precioDisplay">COSTO $<?php echo number_format($precio); ?> COP / POR PERSONA</h2>
+				<?php if($es_temporada): ?>
+				<div class="alert alert-info mt-2 mb-2" id="alertTemporada">
+					<i class="fas fa-calendar-alt"></i> <strong>Temporada activa:</strong> <?php echo $nombre_temporada; ?>
+				</div>
+				<?php endif; ?>
+				<small class="text-muted" id="precioKidsDisplay">** El precio para los <b>niños</b> con el rango de edad de 4-6 años es de <b>$<?php echo number_format($precioKids); ?> COP</b></small>
 				<h4 class="mt-3">puedes reservar abonando:</h4>
 				<h4 class="subtitle-main"><?php echo $abono; ?></h4>			
 
@@ -197,7 +168,9 @@ INFO HABITACIÓN
 
 				<form id="form1" action="<?php echo $ruta; ?>reservas" method="post">
 
-					<input type="hidden" name="id-habitacion" value="<?php echo $habitacion["id_h"]; ?>">
+					<input type="hidden" name="id-habitacion" value="<?php echo $habitacion["id_h"]; ?>" id="idServicio">
+					<input type="hidden" id="precioActual" value="<?php echo $precio; ?>">
+					<input type="hidden" id="precioKidsActual" value="<?php echo $precioKids; ?>">
 
 					<div class="row">
 						<div class="col-sm-12 col-md-5">

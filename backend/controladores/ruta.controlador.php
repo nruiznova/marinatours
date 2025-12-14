@@ -4,15 +4,17 @@ class ControladorRuta{
 
 	static public function ctrRuta(){
 
-		return "https://marinatourscartagena.com.co/";
-		//return "http://localhost:8888/heaventours-landing/";
+		// Cargar configuración dinámica según el entorno
+		$config = require __DIR__ . '/../../config.php';
+		return $config['site_url'];
 
 	}
 
 	static public function ctrRutaBackend(){
 
-		return "https://marinatourscartagena.com.co/backend/";
-		//return "http://localhost:8888/heaventours-landing/backend/";
+		// Cargar configuración dinámica según el entorno
+		$config = require __DIR__ . '/../../config.php';
+		return $config['site_url'] . 'backend/';
 	}
 
 }

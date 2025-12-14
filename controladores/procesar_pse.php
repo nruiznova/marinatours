@@ -87,7 +87,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $date = $dt->format("Y-m-d\TH:i:s") . '.' . sprintf("%03d", $milis) . 'Z';
 
     $codigoReserva = $_POST['codigo_reserva'] ?? 'reserva_' . uniqid();
-    $entityurl = "https://marinatourscartagena.com.co/resultado-pago?id=" .  $codigoReserva; //comprobante pago
+    
+    // Usar URL dinámica según el entorno
+    $config = require __DIR__ . '/../config.php';
+    $entityurl = $config['site_url'] . "resultado-pago?id=" .  $codigoReserva; //comprobante pago
 
     $datosTemporales = ModeloReservas::mdlObtenerDatosTemporales($codigoReserva);
   

@@ -278,6 +278,7 @@ if(isset($_SESSION["idBackend"])){
 	<script src="vistas/js/categorias.js"></script>
 	<script src="vistas/js/habitaciones.js"></script>
 	<script src="vistas/js/reservas.js"></script>
+	<script src="vistas/js/preciosTemporada.js"></script>
 	<script src="vistas/js/testimonios.js"></script>
 	<script src="vistas/js/usuarios.js"></script>
 	<script src="vistas/js/recorrido.js"></script>

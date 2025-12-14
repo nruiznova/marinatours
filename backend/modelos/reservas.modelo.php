@@ -386,25 +386,35 @@ class ModeloReservas{
 
 	static public function mdlActualizarCupos($tabla, $datos){ 
 
-		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (servicios, fecha, cupos) VALUES (:servicios, :fecha, :cupos)");
+		// Primero verificamos si ya existe un registro para esta combinación de servicios y fecha
+		$stmtCheck = Conexion::conectar()->prepare("SELECT id_cupo FROM $tabla WHERE servicios = :servicios AND fecha = :fecha");
+		$stmtCheck->bindParam(":servicios", $datos["servicios"], PDO::PARAM_STR);
+		$stmtCheck->bindParam(":fecha", $datos["fecha"], PDO::PARAM_STR);
+		$stmtCheck->execute();
+		$existe = $stmtCheck->fetch();
+		$stmtCheck = null;
 
-		$stmt->bindParam(":servicios", $datos["servicios"], PDO::PARAM_STR);
-		$stmt->bindParam(":fecha", $datos["fecha"], PDO::PARAM_STR);
-		$stmt->bindParam(":cupos", $datos["cupos"], PDO::PARAM_STR);
-
-		if($stmt -> execute()){
-
-			return "ok";
-
+		if($existe){
+			// Si existe, hacemos UPDATE
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET cupos = :cupos WHERE servicios = :servicios AND fecha = :fecha");
+			$stmt->bindParam(":servicios", $datos["servicios"], PDO::PARAM_STR);
+			$stmt->bindParam(":fecha", $datos["fecha"], PDO::PARAM_STR);
+			$stmt->bindParam(":cupos", $datos["cupos"], PDO::PARAM_INT);
 		}else{
-
-			echo "\nPDO::errorInfo():\n";
-    		print_r(Conexion::conectar()->errorInfo());
-
+			// Si no existe, hacemos INSERT
+			$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (servicios, fecha, cupos) VALUES (:servicios, :fecha, :cupos)");
+			$stmt->bindParam(":servicios", $datos["servicios"], PDO::PARAM_STR);
+			$stmt->bindParam(":fecha", $datos["fecha"], PDO::PARAM_STR);
+			$stmt->bindParam(":cupos", $datos["cupos"], PDO::PARAM_INT);
 		}
 
-		$stmt -> close();
+		if($stmt->execute()){
+			return "ok";
+		}else{
+			return "error";
+		}
 
+		$stmt->close();
 		$stmt = null;
 
 	}

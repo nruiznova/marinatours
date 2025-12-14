@@ -10,7 +10,26 @@ if(isset($_POST["id-habitacion"])):
 
 	$galeria = json_decode($habitacion["galeria"], true);
 
-	$precios = json_decode($habitacion["precio"], true);   	
+	// Obtener fecha de reserva del formulario (formato: dd-mm-yyyy)
+	$fecha_ingreso = isset($_POST["fecha-ingreso"]) ? $_POST["fecha-ingreso"] : date('d-m-Y');
+	
+	// Convertir fecha de dd-mm-yyyy a yyyy-mm-dd para la consulta
+	$partes_fecha = explode('-', $fecha_ingreso);
+	if(count($partes_fecha) === 3){
+		$fecha_reserva = $partes_fecha[2] . '-' . $partes_fecha[1] . '-' . $partes_fecha[0];
+	}else{
+		$fecha_reserva = date('Y-m-d');
+	}
+
+	// Obtener precios base del servicio
+	$precios_base = json_decode($habitacion["precio"], true);
+
+	// Verificar si hay precios de temporada para esta fecha
+	$precios = ControladorPreciosTemporada::ctrObtenerPreciosConTemporada(
+		$habitacion["id_h"], 
+		$fecha_reserva, 
+		$precios_base
+	);
                 
 	$visibilidad = "false";                                           
 

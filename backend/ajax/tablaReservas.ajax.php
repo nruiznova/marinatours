@@ -202,14 +202,14 @@ class TablaReservas{
 				
 				if($value["abono"] == "abono"){
 
-					$pagado += $value["pago_reserva"] / 2;
+					$pagado += floatval($value["pago_reserva"]) / 2;
 
 				}
 
 				if($value["montoPagar"] != ''){
 
-					$pagado = $value["montoPagar"];
-					$pagado_metodo_6 = $value["montoPagar"];
+					$pagado = floatval($value["montoPagar"]);
+					$pagado_metodo_6 = floatval($value["montoPagar"]);
 
 				}else{
 
@@ -219,11 +219,11 @@ class TablaReservas{
 			
 				foreach ($pagos as $row => $item) {
 					
-					$pagado += $item["monto"];
+					$pagado += floatval($item["monto"]);
 
 				}
 
-				$saldo_p = $value["pago_reserva"] - $pagado;
+				$saldo_p = floatval($value["pago_reserva"]) - $pagado;
 
 				$saldo = "<span class='badge badge-danger'>$ ".number_format($saldo_p)."</span>";
 
@@ -302,36 +302,36 @@ class TablaReservas{
 				
 				if($pay["metodo_pago"] == "Bancolombia"){
 
-					$pagado_metodo_1 += $pay["monto"];
+					$pagado_metodo_1 += floatval($pay["monto"]);
 
 				}else if($pay["metodo_pago"] == "Efectivo"){
 
-					$pagado_metodo_2 += $pay["monto"];
+					$pagado_metodo_2 += floatval($pay["monto"]);
 
 				}else if($pay["metodo_pago"] == "Davivienda"){
 
-					$pagado_metodo_3 += $pay["monto"];
+					$pagado_metodo_3 += floatval($pay["monto"]);
 
 				}else if($pay["metodo_pago"] == "Nequi"){
 
-					$pagado_metodo_4 += $pay["monto"];
+					$pagado_metodo_4 += floatval($pay["monto"]);
 
 				}else if($pay["metodo_pago"] == "Daviplata"){
 
-					$pagado_metodo_5 += $pay["monto"];
+					$pagado_metodo_5 += floatval($pay["monto"]);
 
 				}else if($pay["metodo_pago"] == "Mercadopago"){
 
-					$pagado_metodo_6 += $pay["monto"];
+					$pagado_metodo_6 += floatval($pay["monto"]);
 
 				}else if($pay["metodo_pago"] == "Payu"){
 
-					$pagado_metodo_7 += $pay["monto"];
+					$pagado_metodo_7 += floatval($pay["monto"]);
 
 				}
 				else if($pay["metodo_pago"] == "PSE"){
 
-					$pagado_metodo_8 += $pay["monto"];
+					$pagado_metodo_8 += floatval($pay["monto"]);
 					$pagado_metodo_6 = 0; // esto por que se esta llenado la casilla de mercado pago tambien
 
 				}

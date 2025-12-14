@@ -1551,9 +1551,11 @@ $("#consultarCuposModal").click(function(){
 
 	if(servicios == '' || fecha == ''){
 
-		$("#responseCuposModal").text("Seleccione una agrupacion de servicios y una fecha")
+		$("#responseCuposModal").show().html('<span class="text-danger"><i class="fas fa-exclamation-triangle mr-2"></i>Por favor, seleccione una agrupación de servicios y una fecha</span>')
 
 	}else{
+
+		$("#responseCuposModal").show().html('<span class="text-info"><i class="fas fa-spinner fa-spin mr-2"></i>Consultando...</span>')
 
 		var datos = new FormData();
 		datos.append("serviciosCupos", servicios)
@@ -1568,21 +1570,24 @@ $("#consultarCuposModal").click(function(){
 			contentType: false,
 			processData: false,
 			dataType: "json",
-			async: false,
 			success:function(respuesta){
 
-				if(!respuesta){
+				if(!respuesta || respuesta == null || respuesta == false){
 
-					$("#responseCuposModal").text("No se han ajustado los cupos para esta fecha")
+					$("#responseCuposModal").show().html('<span class="text-warning"><i class="fas fa-info-circle mr-2"></i>No se han ajustado los cupos para esta fecha. Los cupos predeterminados se tomarán de la configuración del servicio.</span>')
 					$("#cuposModal").val('')
 
 				}else{
 
-					$("#responseCuposModal").text("")
+					$("#responseCuposModal").show().html('<span class="text-success"><i class="fas fa-check-circle mr-2"></i>Cupos encontrados para la fecha seleccionada</span>')
 					$("#cuposModal").val(respuesta["cupos"])
 
 				}
 
+			},
+			error: function(jqXHR, textStatus, errorThrown){
+				console.error("Error en la petición:", textStatus, errorThrown);
+				$("#responseCuposModal").show().html('<span class="text-danger"><i class="fas fa-exclamation-circle mr-2"></i>Error al consultar los cupos. Por favor, intente nuevamente.</span>')
 			}
 
 		})
@@ -1597,56 +1602,100 @@ $("#submitCuposModal").click(function(){
 	var fecha = $("#fechaCuposModal").val()
 	var cupos = $("#cuposModal").val()
 
-	if(servicios == '' || fecha == '' || cupos == ''){
+	if(servicios == '' || fecha == ''){
 
-		$("#responseCuposModal").text("Seleccione una agrupacion de servicios y una fecha")
-
-	}else{
-
-		var datos = new FormData();
-		datos.append("ajustarServicioCupos", servicios)
-		datos.append("ajustarFechaCupos", fecha)
-		datos.append("ajustarCupos", cupos)
-
-		$.ajax({
-
-			url:"ajax/reservas.ajax.php",
-			method: "POST",
-			data: datos,
-			cache: false,
-			contentType: false,
-			processData: false,
-			dataType: "json",
-			async: false,
-			success:function(respuesta){
-
-				if(respuesta == "ok"){
-
-					swal({
-						type: "success",
-						title: "¡CORRECTO!",
-						text: "Se ajustaron los cupos correctamente",
-						showConfirmButton: true,
-						confirmButtonText: "Cerrar"
-					}).then(function(result){
-
-						if(result.value){
-   
-						   $("#modalAjustarCupos").modal("hide")
-						   $("#modalAjustarCupos input,select").val('')
-						   $("#responseCuposModal").text("")
-   
-						}
-					})
-
-				}
-
-			}
-
-		})
+		$("#responseCuposModal").show().html('<span class="text-danger"><i class="fas fa-exclamation-triangle mr-2"></i>Por favor, seleccione una agrupación de servicios y una fecha</span>')
+		return;
 
 	}
 
+	if(cupos == '' || cupos < 0){
+
+		$("#responseCuposModal").show().html('<span class="text-danger"><i class="fas fa-exclamation-triangle mr-2"></i>Por favor, ingrese un número de cupos válido (0 o mayor)</span>')
+		return;
+
+	}
+
+	$("#responseCuposModal").show().html('<span class="text-info"><i class="fas fa-spinner fa-spin mr-2"></i>Guardando cambios...</span>')
+	$("#submitCuposModal").prop('disabled', true);
+
+	var datos = new FormData();
+	datos.append("ajustarServicioCupos", servicios)
+	datos.append("ajustarFechaCupos", fecha)
+	datos.append("ajustarCupos", cupos)
+
+	$.ajax({
+
+		url:"ajax/reservas.ajax.php",
+		method: "POST",
+		data: datos,
+		cache: false,
+		contentType: false,
+		processData: false,
+		dataType: "json",
+		success:function(respuesta){
+
+			$("#submitCuposModal").prop('disabled', false);
+
+			if(respuesta == "ok"){
+
+				swal({
+					type: "success",
+					title: "¡CORRECTO!",
+					text: "Se ajustaron los cupos correctamente",
+					showConfirmButton: true,
+					confirmButtonText: "Cerrar"
+				}).then(function(result){
+
+					if(result.value){
+
+					   $("#modalAjustarCupos").modal("hide")
+					   $("#modalAjustarCupos input").val('')
+					   $("#modalAjustarCupos select").val('').trigger('change')
+					   $("#responseCuposModal").hide().html("")
+
+					}
+				})
+
+			}else{
+
+				$("#responseCuposModal").show().html('<span class="text-danger"><i class="fas fa-exclamation-circle mr-2"></i>Error al guardar los cupos. Por favor, intente nuevamente.</span>')
+				
+				swal({
+					type: "error",
+					title: "Error",
+					text: "No se pudieron guardar los cupos. Por favor, intente nuevamente.",
+					showConfirmButton: true,
+					confirmButtonText: "Cerrar"
+				})
+
+			}
+
+		},
+		error: function(jqXHR, textStatus, errorThrown){
+			console.error("Error en la petición:", textStatus, errorThrown);
+			$("#submitCuposModal").prop('disabled', false);
+			$("#responseCuposModal").show().html('<span class="text-danger"><i class="fas fa-exclamation-circle mr-2"></i>Error al guardar. Por favor, intente nuevamente.</span>')
+			
+			swal({
+				type: "error",
+				title: "Error de conexión",
+				text: "No se pudo conectar con el servidor. Por favor, intente nuevamente.",
+				showConfirmButton: true,
+				confirmButtonText: "Cerrar"
+			})
+		}
+
+	})
+
+})
+
+// Limpiar modal cuando se cierra
+$('#modalAjustarCupos').on('hidden.bs.modal', function () {
+	$("#modalAjustarCupos input").val('')
+	$("#modalAjustarCupos select").val('').trigger('change')
+	$("#responseCuposModal").hide().html("")
+	$("#submitCuposModal").prop('disabled', false);
 })
 
 function formatDate(dateString) {

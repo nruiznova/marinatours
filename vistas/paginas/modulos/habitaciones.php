@@ -24,54 +24,16 @@ $categorias = ControladorCategorias::ctrMostrarCategorias(null, null);
 			 
              foreach($habitaciones as $key => $value):                         
  
-                    $precios = json_decode($value["precio"], true);   
-                
-                    $visibilidad = "false";                                           
-    
-                    if(isset($_SESSION["validarSesion"]) && $_SESSION["validarSesion"] == "ok"){                                    
-    
-                        foreach ($precios as $row => $item) {
-                            
-                            if($_SESSION["nombre"] == $item["usuario"]){
-        
-                                if($item["visibilidad"] == "true"){
-    
-                                    $precio = $item["precio"];
-                                    $precioKids = $item["precioKids"];
-                                    $visibilidad = "true";
-    
-                                }else{
-    
-                                    $visibilidad == "false";
-    
-                                }
-    
-                            }
-    
-                        }
-                       
-                    }else{
-    
-                        foreach ($precios as $row => $item) {
-    
-                            if($item["usuario"] == "Público en general"){
-    
-                                if($item["visibilidad"] == "true"){
-    
-                                    $precio = $item["precio"];
-                                    $visibilidad = "true";
-    
-                                }else{
-    
-                                    $visibilidad == "false";
-    
-                                }
-    
-                            }
-    
-                        }
-    
-                    }                    
+                    // Obtener precio considerando temporadas (fecha actual)
+                    $precioData = ControladorPreciosTemporada::ctrObtenerPrecioUsuario($value["id_h"], null, date('Y-m-d'));
+                    
+                    if($precioData && $precioData["visibilidad"]):
+                        $precio = $precioData["precio"];
+                        $precioKids = $precioData["precioKids"];
+                        $visibilidad = "true";
+                    else:
+                        $visibilidad = "false";
+                    endif;
     
                     if($visibilidad == "true" && $value["tipo_h"] == $cat["id"]):
     
@@ -141,54 +103,16 @@ $categorias = ControladorCategorias::ctrMostrarCategorias(null, null);
 			 
         foreach($habitaciones as $key => $value):                         
 
-            $precios = json_decode($value["precio"], true);   
-        
-            $visibilidad = "false";                                           
-
-            if(isset($_SESSION["validarSesion"]) && $_SESSION["validarSesion"] == "ok"){                                    
-
-                foreach ($precios as $row => $item) {
-                    
-                    if($_SESSION["nombre"] == $item["usuario"]){
-        
-                        if($item["visibilidad"] == "true"){
-
-                            $precio = $item["precio"];
-                            $precioKids = $item["precioKids"];
-                            $visibilidad = "true";
-
-                        }else{
-
-                            $visibilidad == "false";
-
-                        }
-
-                    }
-
-                }
-                
-            }else{
-
-                foreach ($precios as $row => $item) {
-
-                    if($item["usuario"] == "Público en general"){
-
-                        if($item["visibilidad"] == "true"){
-
-                            $precio = $item["precio"];
-                            $visibilidad = "true";
-
-                        }else{
-
-                            $visibilidad == "false";
-
-                        }
-
-                    }
-
-                }
-
-            }                    
+            // Obtener precio considerando temporadas (fecha actual)
+            $precioData = ControladorPreciosTemporada::ctrObtenerPrecioUsuario($value["id_h"], null, date('Y-m-d'));
+            
+            if($precioData && $precioData["visibilidad"]):
+                $precio = $precioData["precio"];
+                $precioKids = $precioData["precioKids"];
+                $visibilidad = "true";
+            else:
+                $visibilidad = "false";
+            endif;
 
             if($visibilidad == "true"):
 

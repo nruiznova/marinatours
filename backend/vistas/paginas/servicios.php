@@ -1,3 +1,28 @@
+<?php
+
+/*=============================================
+Crear precio de temporada
+=============================================*/
+
+$crearTemporada = new ControladorPreciosTemporada();
+$crearTemporada -> ctrCrearPrecioTemporada();
+
+/*=============================================
+Editar precio de temporada
+=============================================*/
+
+$editarTemporada = new ControladorPreciosTemporada();
+$editarTemporada -> ctrEditarPrecioTemporada();
+
+/*=============================================
+Eliminar precio de temporada
+=============================================*/
+
+$eliminarTemporada = new ControladorPreciosTemporada();
+$eliminarTemporada -> ctrEliminarPrecioTemporada();
+
+?>
+
 <div class="content-wrapper" style="min-height: 717px;">
 
   <section class="content-header">
@@ -50,6 +75,7 @@
           
               <a href="servicios" class="btn btn-primary btn-sm">Agregar nuevo servicio</a>
               <br><a href="#" class="btn btn-secondary btn-sm mt-1" data-toggle="modal" data-target="#modalAjustarCupos">Ajustar cupos disponibles por fecha</a>
+              <br><a href="#" class="btn btn-info btn-sm mt-1" data-toggle="modal" data-target="#modalPreciosTemporada">Gestionar precios por temporada</a>
 
               <div class="card-tools">
                 
@@ -1118,13 +1144,13 @@
                     <td colspan="2">
                       <!-- <div class="form-group"> -->
                         <!-- <label for="test">Password</label> -->
-                        <input type="number" class="form-control" id="cuposModal" placeholder="">
+                        <input type="number" class="form-control" id="cuposModal" placeholder="Ingrese número de cupos" min="0" step="1">
                       <!-- </div> -->
                     </td>
                   </tr>
                 </tbody>
             </table>
-            <div class="alert alert-secondary" role="alert" id="responseCuposModal">
+            <div class="alert alert-light border" role="alert" id="responseCuposModal" style="display:none;">
               
             </div>
         </div>
@@ -1133,6 +1159,178 @@
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
         <button type="button" class="btn btn-primary" id="submitCuposModal">Guardar</button>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Precios por Temporada -->
+<div class="modal fade" id="modalPreciosTemporada" tabindex="-1" role="dialog" aria-labelledby="modalPreciosTemporadaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-info">
+        <h5 class="modal-title" id="modalPreciosTemporadaLabel">
+          <i class="fas fa-calendar-alt mr-2"></i>Gestionar Precios por Temporada
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <!-- Panel izquierdo: Lista de servicios -->
+          <div class="col-md-4">
+            <h6 class="border-bottom pb-2">Seleccione un servicio</h6>
+            <div class="list-group" id="listaServiciosTemporada">
+              <?php
+                $servicios = ControladorHabitaciones::ctrMostrarHabitaciones(null, null);
+                foreach ($servicios as $key => $value) {
+                  echo '<a href="#" class="list-group-item list-group-item-action servicio-temporada-item" data-id-servicio="'.$value["id_h"].'">
+                          <i class="fas fa-ship mr-2"></i>'.$value["estilo"].'
+                          <small class="d-block text-muted">'.$value["tipo"].'</small>
+                        </a>';
+                }
+              ?>
+            </div>
+          </div>
+
+          <!-- Panel derecho: Temporadas del servicio -->
+          <div class="col-md-8">
+            <div id="contenidoTemporadasServicio">
+              <div class="alert alert-info">
+                <i class="fas fa-info-circle mr-2"></i>Seleccione un servicio para ver y gestionar sus temporadas
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Agregar/Editar Temporada -->
+<div class="modal fade" id="modalFormTemporada" tabindex="-1" role="dialog" aria-labelledby="modalFormTemporadaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <form method="post" id="formTemporada">
+        <div class="modal-header bg-success">
+          <h5 class="modal-title" id="modalFormTemporadaLabel">
+            <i class="fas fa-plus-circle mr-2"></i><span id="tituloFormTemporada">Nueva Temporada</span>
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <input type="hidden" name="id_servicio_temporada" id="id_servicio_temporada">
+          <input type="hidden" name="id_precio_temporada_editar" id="id_precio_temporada_editar">
+
+          <div class="form-group">
+            <label>Nombre de la temporada</label>
+            <input type="text" class="form-control" name="nombre_temporada" id="nombre_temporada" placeholder="Ej: Temporada Alta Navidad 2025" required>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Fecha de inicio</label>
+                <input type="date" class="form-control" name="fecha_inicio_temporada" id="fecha_inicio_temporada" required>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Fecha de fin</label>
+                <input type="date" class="form-control" name="fecha_fin_temporada" id="fecha_fin_temporada" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="activo_temporada" name="activo_temporada" checked>
+              <label class="form-check-label" for="activo_temporada">Temporada activa</label>
+            </div>
+          </div>
+
+          <hr>
+          <h6 class="mb-3">Precios por tipo de usuario</h6>
+          <input type="hidden" name="precios_temporada" id="precios_temporada">
+
+          <div class="table-responsive">
+            <table class="table table-sm table-bordered table-hover">
+              <thead class="thead-light">
+                <tr>
+                  <th style="width: 22%;">Tipo de Usuario</th>
+                  <th style="width: 10%;" class="text-center">Visible</th>
+                  <th style="width: 20%;">$ Adultos</th>
+                  <th style="width: 20%;">$ Niños</th>
+                  <th style="width: 10%;" class="text-center">💳</th>
+                  <th style="width: 10%;" class="text-center">50%</th>
+                </tr>
+              </thead>
+              <tbody id="contenedorPreciosTemporada">
+                <?php 
+                  $usuarios = ControladorUsuarios::ctrMostrarUsuarios(null, null);
+                  foreach ($usuarios as $u => $user):
+                ?>
+                <tr>
+                  <td class="align-middle">
+                    <strong><?php echo $user["nombre"]; ?></strong>
+                    <input type="hidden" class="precio-temp-usuario" value="<?php echo $user["nombre"]; ?>">
+                  </td>
+                  <td class="text-center align-middle">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input precio-temp-visible" id="visible_temp_<?php echo $u; ?>">
+                      <label class="form-check-label" for="visible_temp_<?php echo $u; ?>"></label>
+                    </div>
+                  </td>
+                  <td class="align-middle">
+                    <div class="input-group input-group-sm">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">$</span>
+                      </div>
+                      <input type="number" class="form-control precio-temp-adultos" placeholder="0" min="0" step="0.01">
+                    </div>
+                  </td>
+                  <td class="align-middle">
+                    <div class="input-group input-group-sm">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">$</span>
+                      </div>
+                      <input type="number" class="form-control precio-temp-ninos" placeholder="0" min="0" step="0.01">
+                    </div>
+                  </td>
+                  <td class="text-center align-middle">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input precio-temp-credito" id="credito_temp_<?php echo $u; ?>">
+                      <label class="form-check-label" for="credito_temp_<?php echo $u; ?>"></label>
+                    </div>
+                  </td>
+                  <td class="text-center align-middle">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input precio-temp-abono" id="abono_temp_<?php echo $u; ?>">
+                      <label class="form-check-label" for="abono_temp_<?php echo $u; ?>"></label>
+                    </div>
+                  </td>
+                </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-muted small mt-2">
+            <i class="fas fa-info-circle mr-1"></i>
+            Marque "Visible" para cada tipo de usuario y configure sus precios. 💳 = Permite pago a crédito, 50% = Permite abono del 50%
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-success" id="btnGuardarTemporada">
+            <i class="fas fa-save mr-2"></i>Guardar Temporada
+          </button>
+        </div>
+      </form>
     </div>
   </div>
 </div>

@@ -198,8 +198,8 @@ const renderPaymentBrick = async (bricksBuilder) => {
                                         },
                                         customization: {
                                             backUrls: {
-                                                //   'error': 'https://marinatourscartagena.com.co/',
-                                                'return': 'https://marinatourscartagena.com.co/'
+                                                // Usar URL dinámica desde el input hidden
+                                                'return': $('#urlPrincipal').val()
                                             }
                                         }
                                     };
