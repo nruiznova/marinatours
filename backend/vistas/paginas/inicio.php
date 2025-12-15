@@ -41,11 +41,11 @@
 
       </div>
 
-      <div class="row mt-3">
+      <div class="row mt-2">
         <div class="col-12">
-          <a href="#" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#modalAjustarCupos">
+          <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#modalAjustarCupos">
             <i class="fas fa-calendar-check mr-2"></i>Ajustar cupos disponibles por fecha
-          </a>
+          </button>
         </div>
       </div>
 
@@ -136,59 +136,32 @@
                     <th style="width: 50%">Servicios</th>
                     <td colspan="2">
                       <select class="form-control" id="servicioCuposModal">
-
                             <option value="">-- Seleccione --</option>
-
                             <?php
-                            
                               $servicios = ControladorHabitaciones::ctrMostrarHabitaciones(null);
-
                               $servicios_enlazados = [];
-
                               foreach ($servicios as $key => $value) {
-                                
                                 $enlazados = $value["serviciosEnlazados"];
-
                                 $enlazados .= ";".$value["id_h"];
-
                                 $enlazados_arr = explode(";", $enlazados);
-
                                 sort($enlazados_arr);
-
                                 $enlazados_str = implode(";", $enlazados_arr);
-
                                 array_push($servicios_enlazados, $enlazados_str);
-
                               }         
-                              
                               $agrupaciones = array_unique($servicios_enlazados);
-
                               $new_array = array_values($agrupaciones);
-                              
                               // recorrer agrupaciones
-                              
                               for ($i=0; $i < count($new_array); $i++) { 
-
                                   $items = explode(";", $new_array[$i]);
-
                                   // recorrer servicios
-
                                   $desc = '';
-
                                   for ($j=0; $j < count($items); $j++) { 
-                                    
                                     $item = ControladorHabitaciones::ctrMostrarHabitaciones($items[$j]);  
-                                  
                                     $desc .= strtoupper($item["estilo"])." / ";
-
                                   } 
-                                  
                                   echo '<option value="'.$new_array[$i].'">'.$desc.'</option>';
-
                               }                                                            
-                            
                             ?>
-
                         </select>
                     </td>
                   </tr>

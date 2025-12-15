@@ -386,36 +386,85 @@ class ModeloReservas{
 
 	static public function mdlActualizarCupos($tabla, $datos){ 
 
-		// Primero verificamos si ya existe un registro para esta combinación de servicios y fecha
-		$stmtCheck = Conexion::conectar()->prepare("SELECT id_cupo FROM $tabla WHERE servicios = :servicios AND fecha = :fecha");
-		$stmtCheck->bindParam(":servicios", $datos["servicios"], PDO::PARAM_STR);
-		$stmtCheck->bindParam(":fecha", $datos["fecha"], PDO::PARAM_STR);
-		$stmtCheck->execute();
-		$existe = $stmtCheck->fetch();
-		$stmtCheck = null;
-
-		if($existe){
-			// Si existe, hacemos UPDATE
-			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET cupos = :cupos WHERE servicios = :servicios AND fecha = :fecha");
-			$stmt->bindParam(":servicios", $datos["servicios"], PDO::PARAM_STR);
-			$stmt->bindParam(":fecha", $datos["fecha"], PDO::PARAM_STR);
-			$stmt->bindParam(":cupos", $datos["cupos"], PDO::PARAM_INT);
-		}else{
-			// Si no existe, hacemos INSERT
-			$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (servicios, fecha, cupos) VALUES (:servicios, :fecha, :cupos)");
-			$stmt->bindParam(":servicios", $datos["servicios"], PDO::PARAM_STR);
-			$stmt->bindParam(":fecha", $datos["fecha"], PDO::PARAM_STR);
-			$stmt->bindParam(":cupos", $datos["cupos"], PDO::PARAM_INT);
-		}
-
-		if($stmt->execute()){
-			return "ok";
-		}else{
+		try {
+			$conexion = Conexion::conectar();
+			
+			// Obtener los IDs de servicios de la agrupación seleccionada
+			$serviciosSeleccionados = explode(";", $datos["servicios"]);
+			$serviciosSeleccionados = array_filter($serviciosSeleccionados); // Eliminar valores vacíos
+			
+			// Buscar todas las agrupaciones en la tabla cupos que contengan alguno de estos servicios
+			// para la misma fecha
+			$stmtBuscar = $conexion->prepare("SELECT * FROM $tabla WHERE fecha = :fecha");
+			$stmtBuscar->bindParam(":fecha", $datos["fecha"], PDO::PARAM_STR);
+			$stmtBuscar->execute();
+			$agrupacionesExistentes = $stmtBuscar->fetchAll();
+			$stmtBuscar = null;
+			
+			// Array para guardar las agrupaciones que necesitan actualización
+			$agrupacionesActualizar = [];
+			
+			// Verificar si alguna agrupación existente comparte servicios con la seleccionada
+			foreach ($agrupacionesExistentes as $agrupacion) {
+				$serviciosAgrupacion = explode(";", $agrupacion["servicios"]);
+				$serviciosAgrupacion = array_filter($serviciosAgrupacion);
+				
+				// Verificar si hay intersección entre los servicios
+				$interseccion = array_intersect($serviciosSeleccionados, $serviciosAgrupacion);
+				
+				if (!empty($interseccion)) {
+					// Esta agrupación comparte servicios, debe actualizarse
+					$agrupacionesActualizar[] = $agrupacion["servicios"];
+				}
+			}
+			
+			// Si no encontramos agrupaciones relacionadas, usar solo la agrupación seleccionada
+			if (empty($agrupacionesActualizar)) {
+				$agrupacionesActualizar[] = $datos["servicios"];
+			}
+			
+			// Actualizar o insertar cupos para cada agrupación relacionada
+			$resultado = true;
+			foreach ($agrupacionesActualizar as $agrupacion) {
+				// Verificar si ya existe un registro para esta agrupación y fecha
+				$stmtCheck = $conexion->prepare("SELECT id_cupo FROM $tabla WHERE servicios = :servicios AND fecha = :fecha");
+				$stmtCheck->bindParam(":servicios", $agrupacion, PDO::PARAM_STR);
+				$stmtCheck->bindParam(":fecha", $datos["fecha"], PDO::PARAM_STR);
+				$stmtCheck->execute();
+				$existe = $stmtCheck->fetch();
+				$stmtCheck = null;
+				
+				if($existe){
+					// Si existe, hacemos UPDATE
+					$stmt = $conexion->prepare("UPDATE $tabla SET cupos = :cupos WHERE servicios = :servicios AND fecha = :fecha");
+					$stmt->bindParam(":servicios", $agrupacion, PDO::PARAM_STR);
+					$stmt->bindParam(":fecha", $datos["fecha"], PDO::PARAM_STR);
+					$stmt->bindParam(":cupos", $datos["cupos"], PDO::PARAM_INT);
+				}else{
+					// Si no existe, hacemos INSERT
+					$stmt = $conexion->prepare("INSERT INTO $tabla (servicios, fecha, cupos) VALUES (:servicios, :fecha, :cupos)");
+					$stmt->bindParam(":servicios", $agrupacion, PDO::PARAM_STR);
+					$stmt->bindParam(":fecha", $datos["fecha"], PDO::PARAM_STR);
+					$stmt->bindParam(":cupos", $datos["cupos"], PDO::PARAM_INT);
+				}
+				
+				if(!$stmt->execute()){
+					$resultado = false;
+					break;
+				}
+				
+				$stmt = null;
+			}
+			
+			if($resultado){
+				return "ok";
+			}else{
+				return "error";
+			}
+			
+		} catch (Exception $e) {
 			return "error";
 		}
-
-		$stmt->close();
-		$stmt = null;
 
 	}
 
