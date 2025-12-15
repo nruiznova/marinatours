@@ -407,18 +407,30 @@ Class ModeloReservas{
 		$serviciosRelacionados = explode(";", $servicio['serviciosEnlazados']);
 		$serviciosRelacionados[] = $idServicio;
 		$serviciosRelacionados = array_unique($serviciosRelacionados);
+		$serviciosRelacionados = array_filter($serviciosRelacionados);
 		
 		// 2. Verificar si hay cupos ajustados para esta fecha
-		// Ordenar los servicios relacionados para formar la clave de búsqueda
-		sort($serviciosRelacionados);
-		$serviciosClave = implode(";", $serviciosRelacionados);
+		// Buscar en la tabla cupos si existe alguna agrupación que contenga servicios relacionados
+		$stmtCupos = $pdo->prepare("SELECT * FROM cupos WHERE fecha = ?");
+		$stmtCupos->execute([$fecha]);
+		$agrupacionesCupos = $stmtCupos->fetchAll(PDO::FETCH_ASSOC);
 		
-		$stmtCupos = $pdo->prepare("SELECT cupos FROM cupos WHERE servicios = ? AND fecha = ?");
-		$stmtCupos->execute([$serviciosClave, $fecha]);
-		$cuposAjustados = $stmtCupos->fetch(PDO::FETCH_ASSOC);
+		$cupos = $cuposBase; // Por defecto usar cupos base
 		
-		// Si hay cupos ajustados para esta fecha, usar esos; si no, usar los cupos base
-		$cupos = $cuposAjustados ? (int)$cuposAjustados['cupos'] : $cuposBase;
+		// Verificar si alguna agrupación de cupos contiene servicios relacionados
+		foreach ($agrupacionesCupos as $agrupacion) {
+			$serviciosAgrupacion = explode(";", $agrupacion["servicios"]);
+			$serviciosAgrupacion = array_filter($serviciosAgrupacion);
+			
+			// Verificar si hay intersección entre los servicios
+			$interseccion = array_intersect($serviciosRelacionados, $serviciosAgrupacion);
+			
+			if (!empty($interseccion)) {
+				// Encontramos cupos ajustados para esta agrupación, usar esos cupos
+				$cupos = (int)$agrupacion['cupos'];
+				break; // Usamos la primera coincidencia
+			}
+		}
 	
 		// 3. Obtener todas las reservas para esos servicios en la fecha
 		$inQuery = implode(',', array_fill(0, count($serviciosRelacionados), '?'));

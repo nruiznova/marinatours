@@ -365,18 +365,40 @@ class ModeloReservas{
 
 	static public function mdlMostrarCupos($tabla, $datos){		
 
-		$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE servicios = :servicios AND fecha = :fecha ORDER BY id_cupo DESC");
-
-		$stmt -> bindParam(":servicios", $datos["servicios"], PDO::PARAM_STR);
-		$stmt -> bindParam(":fecha", $datos["fecha"], PDO::PARAM_STR);
-
-		$stmt -> execute();
-
-		return $stmt -> fetch();		
-
-		$stmt -> close();
-
-		$stmt = null;
+		try {
+			$conexion = Conexion::conectar();
+			
+			// Obtener los IDs de servicios de la agrupación seleccionada
+			$serviciosSeleccionados = explode(";", $datos["servicios"]);
+			$serviciosSeleccionados = array_filter($serviciosSeleccionados); // Eliminar valores vacíos
+			
+			// Buscar todas las agrupaciones en la tabla cupos para esta fecha
+			$stmtBuscar = $conexion->prepare("SELECT * FROM $tabla WHERE fecha = :fecha");
+			$stmtBuscar->bindParam(":fecha", $datos["fecha"], PDO::PARAM_STR);
+			$stmtBuscar->execute();
+			$agrupacionesExistentes = $stmtBuscar->fetchAll();
+			$stmtBuscar = null;
+			
+			// Buscar si alguna agrupación existente comparte servicios con la seleccionada
+			foreach ($agrupacionesExistentes as $agrupacion) {
+				$serviciosAgrupacion = explode(";", $agrupacion["servicios"]);
+				$serviciosAgrupacion = array_filter($serviciosAgrupacion);
+				
+				// Verificar si hay intersección entre los servicios
+				$interseccion = array_intersect($serviciosSeleccionados, $serviciosAgrupacion);
+				
+				if (!empty($interseccion)) {
+					// Encontramos una agrupación que comparte servicios, retornarla
+					return $agrupacion;
+				}
+			}
+			
+			// Si no se encuentra ninguna agrupación relacionada, retornar false
+			return false;
+			
+		} catch (Exception $e) {
+			return false;
+		}
 
 	}
 
