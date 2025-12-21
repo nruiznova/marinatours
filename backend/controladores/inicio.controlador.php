@@ -14,6 +14,20 @@ class ControladorInicio{
 		
 		return $respuesta;
 
+	}
+
+	/*=============================================
+	SUMAR DEVOLUCIONES
+	=============================================*/
+
+	static public function ctrSumarDevoluciones($fecha, $id_s){ 
+
+		$tabla = "reservas"; 
+
+		$respuesta = ModeloInicio::mdlSumarDevoluciones($tabla, $fecha, $id_s);
+		
+		return $respuesta;
+
 	}	 
 
 	/*=============================================

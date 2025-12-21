@@ -5,20 +5,45 @@ require_once "conexion.php";
 class ModeloInicio{
 
 	/*=============================================
-	Sumar Ventas
+	Sumar Ventas (Excluyendo devoluciones)
 	=============================================*/
 
 	static public function mdlSumarVentas($tabla, $fecha, $id_s){ 
 
-		// AND id_habitacion = :id_habitacion para filtrar por servicio tambien
-
-		$stmt = Conexion::conectar()->prepare("SELECT SUM(pago_reserva) as total FROM $tabla WHERE fecha_reserva LIKE :fecha");
+		// Excluir devoluciones: estado = 3 y fecha_ingreso = NULL
+		$stmt = Conexion::conectar()->prepare("SELECT SUM(pago_reserva) as total FROM $tabla WHERE fecha_reserva LIKE :fecha AND id_habitacion = :id_habitacion AND NOT (estado = 3 AND fecha_ingreso IS NULL)");
 
 		$valor_like = '%' . $fecha . '%'; 
 
 		$stmt -> bindParam(":fecha", $valor_like, PDO::PARAM_STR);
 
-		// $stmt -> bindParam(":id_habitacion", $id_s, PDO::PARAM_INT);
+		$stmt -> bindParam(":id_habitacion", $id_s, PDO::PARAM_INT);
+
+		$stmt -> execute();
+
+		return $stmt -> fetch();
+
+		$stmt -> close();
+
+		$stmt = null;
+
+	}
+
+	/*=============================================
+	Sumar Devoluciones
+	=============================================*/
+
+	static public function mdlSumarDevoluciones($tabla, $fecha, $id_s){ 
+
+		// Solo devoluciones: estado = 3 y fecha_ingreso = NULL
+		// Vinculado con la fecha en que se realizó la reserva (fecha_reserva)
+		$stmt = Conexion::conectar()->prepare("SELECT SUM(pago_reserva) as total FROM $tabla WHERE fecha_reserva LIKE :fecha AND id_habitacion = :id_habitacion AND estado = 3 AND fecha_ingreso IS NULL");
+
+		$valor_like = '%' . $fecha . '%'; 
+
+		$stmt -> bindParam(":fecha", $valor_like, PDO::PARAM_STR);
+
+		$stmt -> bindParam(":id_habitacion", $id_s, PDO::PARAM_INT);
 
 		$stmt -> execute();
 

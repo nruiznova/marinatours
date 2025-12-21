@@ -17,13 +17,51 @@ foreach ($traerReservas as $key => $value) {
 
 <style>
 	.fc-event {
-		border: 1px solid #3a87ad !important; /* default BORDER color */
-		background-color: #3a87ad !important; /* default BACKGROUND color */
-		color: #fff !important;               /* default TEXT color */
-		font-size: 1.85em;            /* EDIT HERE */
-		cursor: default;
+		border: 1px solid #28a745 !important;
+		background: linear-gradient(135deg, #28a745 0%, #20c997 100%) !important;
+		color: #fff !important;
+		font-size: 0.85em !important;
+		cursor: pointer;
 		text-align: center;
-		font-weight: bold;
+		font-weight: 600;
+		padding: 4px 8px !important;
+		border-radius: 4px !important;
+		box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+		transition: all 0.3s ease;
+	}
+	
+	.fc-event:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+	}
+	
+	.fc-title {
+		font-size: 1.1em !important;
+		display: inline-block;
+		background-color: rgba(255,255,255,0.2);
+		padding: 2px 8px;
+		border-radius: 12px;
+		min-width: 30px;
+	}
+	
+	.fc-content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 4px;
+	}
+	
+	.fc-day-grid-event {
+		margin: 2px 3px !important;
+	}
+	
+	.fc-day-number {
+		color: #495057;
+		font-weight: 500;
+	}
+	
+	.fc-today {
+		background-color: #fff9e6 !important;
 	}
 </style>
 
@@ -96,10 +134,12 @@ var dia = ("0"+fechaActual.getDate()).slice(-2);
 
 				for($j = 0; $j < count($descripcion); $j++){
 
-					echo '{"title":"'.$fechas[$noRepetirFechas[$j]].'",
+					$cantidadReservas = $fechas[$noRepetirFechas[$j]];
+					$titulo = "👥 " . $cantidadReservas;
+
+					echo '{"title":"'.$titulo.'",
 						"start":"'.$noRepetirFechas[$j].'",
-						"end":"'.$fechaSalida[$j].'",
-						"color": "#FFCC29"},';									
+						"end":"'.$fechaSalida[$j].'"},';									
 
 				}				
 

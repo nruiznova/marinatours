@@ -1299,19 +1299,19 @@ $("#registrarPagoReserva").click(function(){
 
 $("#filterBy").change(function(){
 
-	iniciarTabla(null, null)
-	iniciarTabla2(null, null)
-
 	var opt = $(this).val()
 
 	if(opt == "reservas"){
+
+		// Cargar todas las reservas por defecto
+		iniciarTabla("all", "all")
 
 		$("#filtrosOpt1, #containertable1").show()
 		$("#filtrosOpt2, #containertable2").hide()	
 		
 		$(".valueSearch").datepicker("destroy")
 
-	}else{
+	}else if(opt == "beneficiarios"){
 
 		$("#filtrosOpt1, #containertable1").hide()
 		$("#filtrosOpt2, #containertable2").show()

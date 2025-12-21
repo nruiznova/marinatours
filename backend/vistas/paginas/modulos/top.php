@@ -61,6 +61,12 @@ Sumar ventas
 $sumaVentas = ControladorInicio::ctrSumarVentas($fecha_total, $id_s); 
 
 /*=============================================
+Sumar devoluciones
+=============================================*/
+
+$sumaDevoluciones = ControladorInicio::ctrSumarDevoluciones($fecha_total, $id_s); 
+
+/*=============================================
 Total Reservas
 =============================================*/
 
@@ -168,9 +174,7 @@ Sumar ventas
         <input type="text" class="form-control text-uppercase text-center" value="<?php 
         
         if(isset($_GET["id_s"])){
-
           
-
           if(isset($servicios[$_GET["id_s"]])){
 
             echo $servicios[$_GET["id_s"]]["estilo"];
@@ -274,9 +278,19 @@ Sumar ventas
 
         <div class="inner">
 
-          <h3>$ <span><?php if($sumaVentas["total"]){ echo number_format($sumaVentas["total"], 2, ",", "."); }else{ echo '0'; } ?></span></h3> 
+          <h3>Ventas Totales</h3>
 
-          <p class="text-uppercase">Ventas Totales</p>
+          <p class="mb-1" style="color: #ffffff;">
+            <i class="fas fa-arrow-up"></i> 
+            <span class="text-bold" style="font-size: 1.1rem;">$ <?php if($sumaVentas["total"]){ echo number_format($sumaVentas["total"], 2, ",", "."); }else{ echo '0,00'; } ?></span>
+            <small class="d-block" style="color: #e0e0e0;">Ventas realizadas</small>
+          </p>
+
+          <p class="mb-0" style="color: #ffcccc;">
+            <i class="fas fa-arrow-down"></i> 
+            <span class="text-bold" style="font-size: 1.1rem;">- $ <?php if($sumaDevoluciones["total"]){ echo number_format($sumaDevoluciones["total"], 2, ",", "."); }else{ echo '0,00'; } ?></span>
+            <small class="d-block" style="color: #ffdddd;">Devoluciones (vinculadas a ventas de este día)</small>
+          </p>
 
         </div>
 

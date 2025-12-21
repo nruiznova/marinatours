@@ -22,7 +22,7 @@ class ModeloHabitaciones{
 
 		}else{
 
-			$stmt = Conexion::conectar()->prepare("SELECT $tabla1.*, $tabla2.* FROM $tabla1 INNER JOIN $tabla2 ON $tabla1.id = $tabla2.tipo_h ORDER BY $tabla2.id_h DESC");
+			$stmt = Conexion::conectar()->prepare("SELECT $tabla1.*, $tabla2.* FROM $tabla1 INNER JOIN $tabla2 ON $tabla1.id = $tabla2.tipo_h ORDER BY $tabla2.orden ASC, $tabla2.id_h ASC");
 
 			$stmt -> execute();
 
@@ -42,7 +42,7 @@ class ModeloHabitaciones{
 
 	static public function mdlNuevaHabitacion($tabla, $datos){
 
-		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(tipo_h, estilo, ruta, galeria, banner, cupos, serviciosEnlazados, precio, caracteristicas, lugarSalida, horaSalida, incluye, noIncluye, recomendaciones, itinerario, descripcion_h) VALUES (:tipo_h, :estilo, :ruta, :galeria, :banner, :cupos, :serviciosEnlazados, :precio, :caracteristicas, :lugarSalida, :horaSalida, :incluye, :noIncluye, :recomendaciones, :itinerario, :descripcion_h)");
+		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(tipo_h, estilo, ruta, galeria, banner, cupos, orden, serviciosEnlazados, precio, caracteristicas, lugarSalida, horaSalida, incluye, noIncluye, recomendaciones, itinerario, descripcion_h) VALUES (:tipo_h, :estilo, :ruta, :galeria, :banner, :cupos, :orden, :serviciosEnlazados, :precio, :caracteristicas, :lugarSalida, :horaSalida, :incluye, :noIncluye, :recomendaciones, :itinerario, :descripcion_h)");
 
 		$stmt->bindParam(":tipo_h", $datos["tipo_h"], PDO::PARAM_STR);
 		$stmt->bindParam(":estilo", $datos["estilo"], PDO::PARAM_STR);
@@ -51,6 +51,7 @@ class ModeloHabitaciones{
 		$stmt->bindParam(":descripcion_h", $datos["descripcion_h"], PDO::PARAM_STR);
 		$stmt->bindParam(":banner", $datos["banner"], PDO::PARAM_STR);
 		$stmt->bindParam(":cupos", $datos["cupos"], PDO::PARAM_STR);
+		$stmt->bindParam(":orden", $datos["orden"], PDO::PARAM_INT);
 		$stmt->bindParam(":serviciosEnlazados", $datos["serviciosEnlazados"], PDO::PARAM_STR);
 		$stmt->bindParam(":precio", $datos["precio"], PDO::PARAM_STR);
 		$stmt->bindParam(":caracteristicas", $datos["caracteristicas"], PDO::PARAM_STR);
@@ -83,7 +84,7 @@ class ModeloHabitaciones{
 
 	static public function mdlEditarHabitacion($tabla, $datos){
 
-		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET tipo_h = :tipo_h, estilo = :estilo, ruta = :ruta, galeria = :galeria, banner = :banner, cupos = :cupos, serviciosEnlazados = :serviciosEnlazados, precio = :precio, caracteristicas = :caracteristicas, lugarSalida = :lugarSalida, horaSalida = :horaSalida, incluye = :incluye, noIncluye = :noIncluye, recomendaciones = :recomendaciones, itinerario = :itinerario, descripcion_h = :descripcion_h WHERE id_h = :id_h");
+		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET tipo_h = :tipo_h, estilo = :estilo, ruta = :ruta, galeria = :galeria, banner = :banner, cupos = :cupos, orden = :orden, serviciosEnlazados = :serviciosEnlazados, precio = :precio, caracteristicas = :caracteristicas, lugarSalida = :lugarSalida, horaSalida = :horaSalida, incluye = :incluye, noIncluye = :noIncluye, recomendaciones = :recomendaciones, itinerario = :itinerario, descripcion_h = :descripcion_h WHERE id_h = :id_h");
 
 		$stmt->bindParam(":id_h", $datos["id_h"], PDO::PARAM_STR);
 		$stmt->bindParam(":tipo_h", $datos["tipo_h"], PDO::PARAM_STR);
@@ -93,6 +94,7 @@ class ModeloHabitaciones{
 		$stmt->bindParam(":descripcion_h", $datos["descripcion_h"], PDO::PARAM_STR);
 		$stmt->bindParam(":banner", $datos["banner"], PDO::PARAM_STR);
 		$stmt->bindParam(":cupos", $datos["cupos"], PDO::PARAM_STR);
+		$stmt->bindParam(":orden", $datos["orden"], PDO::PARAM_INT);
 		$stmt->bindParam(":serviciosEnlazados", $datos["serviciosEnlazados"], PDO::PARAM_STR);
 		$stmt->bindParam(":precio", $datos["precio"], PDO::PARAM_STR);
 		$stmt->bindParam(":caracteristicas", $datos["caracteristicas"], PDO::PARAM_STR);
@@ -151,6 +153,64 @@ class ModeloHabitaciones{
 	static public function getLastId($tabla){
 		
 		$stmt = Conexion::conectar()->prepare("SELECT id_h FROM $tabla ORDER BY id_h DESC");		
+
+		$stmt -> execute();
+
+		return $stmt -> fetch();
+
+		$stmt -> close();
+
+		$stmt = null;
+
+	}
+
+	/*=============================================
+	Obtener total de habitaciones
+	=============================================*/
+
+	static public function mdlContarHabitaciones($tabla){
+		
+		$stmt = Conexion::conectar()->prepare("SELECT COUNT(*) as total FROM $tabla");		
+
+		$stmt -> execute();
+
+		return $stmt -> fetch();
+
+		$stmt -> close();
+
+		$stmt = null;
+
+	}
+
+	/*=============================================
+	Obtener habitación por orden
+	=============================================*/
+
+	static public function mdlObtenerHabitacionPorOrden($tabla, $orden){
+		
+		$stmt = Conexion::conectar()->prepare("SELECT id_h, orden FROM $tabla WHERE orden = :orden");		
+
+		$stmt -> bindParam(":orden", $orden, PDO::PARAM_INT);
+
+		$stmt -> execute();
+
+		return $stmt -> fetch();
+
+		$stmt -> close();
+
+		$stmt = null;
+
+	}
+
+	/*=============================================
+	Obtener orden actual de una habitación
+	=============================================*/
+
+	static public function mdlObtenerOrdenActual($tabla, $id_h){
+		
+		$stmt = Conexion::conectar()->prepare("SELECT orden FROM $tabla WHERE id_h = :id_h");		
+
+		$stmt -> bindParam(":id_h", $id_h, PDO::PARAM_INT);
 
 		$stmt -> execute();
 

@@ -313,7 +313,37 @@ $eliminarTemporada -> ctrEliminarPrecioTemporada();
                       </div>
                   </div>
 
-                  <div class="form-group col-lg-8">
+                  <div class="form-group col-lg-2">
+                      <label for="inputCity">Orden</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text"><i class="fas fa-sort-numeric-down"></i></div>
+                        </div>
+                        <input type="number" class="form-control ordenServicio" id="" min="1" placeholder="<?php 
+                        
+                        if($habitacion != null){ 
+                          echo $habitacion["orden"]; 
+                        }else{
+                          // Sugerir el siguiente orden disponible
+                          $serviciosOrden = ControladorHabitaciones::ctrMostrarHabitaciones(null, null);
+                          echo count($serviciosOrden) + 1;
+                        }
+                        
+                        ?>" value="<?php if($habitacion != null){ echo $habitacion["orden"]; } ?>">
+                      </div>
+                      <small class="form-text text-muted">Entre 1 y <?php 
+                      
+                      if($habitacion != null){
+                        $totalServiciosOrden = ControladorHabitaciones::ctrMostrarHabitaciones(null, null);
+                        echo count($totalServiciosOrden);
+                      }else{
+                        echo count($serviciosOrden) + 1;
+                      }
+                      
+                      ?></small>
+                  </div>
+
+                  <div class="form-group col-lg-6">
                       <label for="inputCity">Enlazar cupos con otro servicio</label>
                       <div class="input-group">
                         <!-- <div class="input-group-prepend">

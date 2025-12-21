@@ -15,6 +15,7 @@ class AjaxHabitaciones{
     public $galeriaAntigua;
 	public $banner;
 	public $cupos;
+	public $orden;
 	public $serviciosEnlazados;
 	public $precio;
 	public $caracteristicas;
@@ -39,6 +40,7 @@ class AjaxHabitaciones{
 						"descripcion" => $this->descripcion,
 						"banner" => $this->banner,
 						"cupos" => $this->cupos,
+						"orden" => $this->orden,
 						"serviciosEnlazados" => $this->serviciosEnlazados,
 						"precio" => $this->precio,
 						"caracteristicas" => $this->caracteristicas,
@@ -72,6 +74,7 @@ class AjaxHabitaciones{
 						"descripcion" => $this->descripcion,
 						"banner" => $this->banner,
 						"cupos" => $this->cupos,
+						"orden" => $this->orden,
 						"serviciosEnlazados" => $this->serviciosEnlazados,
 						"precio" => $this->precio,
 						"caracteristicas" => $this->caracteristicas,
@@ -125,6 +128,7 @@ if(isset($_POST["tipo"])){
     $habitacion -> galeriaAntigua = $_POST["galeriaAntigua"];
     $habitacion -> banner = $_POST["banner"];
 	$habitacion -> cupos = $_POST["cupos"];
+	$habitacion -> orden = $_POST["orden"];
 	$habitacion -> serviciosEnlazados = $_POST["serviciosEnlazados"];
 	$habitacion -> precio = $_POST["precio"];
 	$habitacion -> caracteristicas = $_POST["caracteristicas"];

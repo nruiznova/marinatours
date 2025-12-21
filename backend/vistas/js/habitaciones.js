@@ -545,6 +545,8 @@ $(".guardarHabitacion").click(function(){
 
 	var cupos = $(".cuposServicio").val()
 
+	var orden = $(".ordenServicio").val()
+
 	var serviciosEnlazados = $(".serviciosEnlazados").val().join(';')
 
 	var precio = $(".precioServicio").val()
@@ -584,6 +586,17 @@ $(".guardarHabitacion").click(function(){
 		swal({
 	        title: "Error al guardar",
 	        text: "Tiene que definir los cupos disponibles del servicio del servicio",
+	        type: "error",
+	        confirmButtonText: "¡Cerrar!"
+	      });
+
+    	return;
+
+	}else if(orden == '' || orden == null){
+
+		swal({
+	        title: "Error al guardar",
+	        text: "Tiene que definir el orden del servicio (mínimo 1)",
 	        type: "error",
 	        confirmButtonText: "¡Cerrar!"
 	      });
@@ -655,6 +668,7 @@ $(".guardarHabitacion").click(function(){
 		datos.append("ruta", ruta);
 		datos.append("banner", banner);
 		datos.append("cupos", cupos);
+		datos.append("orden", orden);
 		datos.append("serviciosEnlazados", serviciosEnlazados);
 		datos.append("precio", precio);
 		datos.append("caracteristicas", caracteristicas);
@@ -715,6 +729,28 @@ $(".guardarHabitacion").click(function(){
 
 		                  }
 
+		              });
+
+      			}else if(respuesta == "error_orden"){
+
+      				swal({
+		                type:"error",
+		                  title: "¡ORDEN INVÁLIDO!",
+		                  text: "¡El orden debe estar entre 1 y el total de servicios!",
+		                  showConfirmButton: true,
+		                confirmButtonText: "Cerrar"
+		                
+		              });
+
+      			}else{
+
+      				swal({
+		                type:"error",
+		                  title: "¡ERROR!",
+		                  text: "¡Hubo un problema al guardar el servicio!",
+		                  showConfirmButton: true,
+		                confirmButtonText: "Cerrar"
+		                
 		              });
 
       			}

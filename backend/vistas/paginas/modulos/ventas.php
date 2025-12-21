@@ -35,8 +35,10 @@ if(isset($_GET["typeFilter"])){
 
 }else{
 
-    $item = null;
-    $valor = null;
+    // Por defecto: cargar el mes actual
+    $item = "rango";
+    $mesActual = date("Y-m");
+    $valor = date("Y-m-01", strtotime($mesActual))."/".date("Y-m-t", strtotime(date("Y-m-01", strtotime($mesActual))));
 
 }
 
@@ -148,7 +150,29 @@ foreach ($respuesta as $key => $value){
 
         }else{
 
-            $fecha = date("Y", strtotime($value["fecha_ingreso"]));
+            // Por defecto mostrar todos los días del mes actual
+            $month = date("m");
+            $year = date("Y");
+
+            for($d=1; $d<=31; $d++)
+            {
+                $time=mktime(12, 0, 0, $month, $d, $year);          
+                if (date('m', $time)==$month)       
+                    $day = date('d', $time);
+                    array_push($arrayFechas, $day);
+                    #Capturamos las ventas    
+                    $arrayVentas = array($day => "0");    
+                    
+                    #Sumamos los pagos que ocurrieron el mismo mes
+
+                    foreach ($arrayVentas as $key2 => $value2) {
+
+                        $sumaPagosMes[$key2] += $value2;
+                            
+                    }
+            }
+
+            $fecha = date("d", strtotime($value["fecha_ingreso"]));
 
             #Capturamos las ventas    
             $arrayVentas = array($fecha => $value["pago_reserva"]);    
@@ -275,9 +299,9 @@ if(isset($_GET["fecha_total"]) && $_GET["fecha_total"] != ''){
 
                         echo'
 
-                        <option value="month">Todos los dias del mes</option>
+                        <option value="month" selected>Todos los dias del mes</option>
                         <option value="year">Todos los meses de año</option>
-                        <option value="all" selected>Todos los años</option>
+                        <option value="all">Todos los años</option>
                         
                         ';
 
@@ -379,11 +403,13 @@ if(isset($_GET["fecha_total"]) && $_GET["fecha_total"] != ''){
 
             }else{
 
+                $mesActual = date("Y-m");
+
                 echo'
                 
-                    <div class="form-group filterVentasMes" style="width: 365px; display:none;">            
+                    <div class="form-group filterVentasMes" style="width: 365px;">            
                         <div class="input-group mb-3">
-                            <input type="month" class="form-control dateValue" style="background-color: #17a2b8 !important; color: #fff !important">
+                            <input type="month" class="form-control dateValue" value="'.$mesActual.'" style="background-color: #17a2b8 !important; color: #fff !important">
                             <div class="input-group-append">
                                 <span class="input-group-text btn searchDate" style="background-color: #17a2b8 !important; color: #fff !important">
                                     <i class="fas fa-search"></i>

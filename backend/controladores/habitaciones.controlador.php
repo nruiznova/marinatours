@@ -36,6 +36,30 @@ class ControladorHabitaciones{
 		// 	preg_match('/^[\/\=\\&\\$\\;\\_\\|\\*\\"\\<\\>\\?\\¿\\!\\¡\\:\\,\\.\\0-9a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/', $datos["itinerario"])
 		//    ){
 
+			// Validar orden
+			$tabla = "habitaciones";
+			
+			// Obtener total de servicios actuales
+			$totalServicios = ModeloHabitaciones::mdlContarHabitaciones($tabla);
+			$cantidadServicios = $totalServicios["total"];
+			
+			// El orden máximo permitido es cantidadServicios + 1 (el nuevo servicio)
+			if(!isset($datos["orden"]) || $datos["orden"] == '' || $datos["orden"] > ($cantidadServicios + 1) || $datos["orden"] < 1){
+				
+				return "error_orden";
+			}
+
+			// Si el orden ya existe, mover los demás servicios
+			$servicioConOrdenDeseado = ModeloHabitaciones::mdlObtenerHabitacionPorOrden($tabla, $datos["orden"]);
+			
+			if($servicioConOrdenDeseado){
+				// Incrementar el orden de todos los servicios >= al orden deseado
+				$conexion = Conexion::conectar();
+				$stmt = $conexion->prepare("UPDATE $tabla SET orden = orden + 1 WHERE orden >= :orden");
+				$stmt->bindParam(":orden", $datos["orden"], PDO::PARAM_INT);
+				$stmt->execute();
+			}
+
 			// banner	
 			
 			$file = $datos["banner"];
@@ -440,6 +464,35 @@ class ControladorHabitaciones{
 
 			$tabla = "habitaciones";
 
+			// Validar y manejar el intercambio de órdenes ANTES de guardar
+			// Obtener total de servicios
+			$totalServicios = ModeloHabitaciones::mdlContarHabitaciones($tabla);
+			$cantidadServicios = $totalServicios["total"];
+			
+			// Validar que el orden no sea mayor a la cantidad de servicios ni menor a 1
+			if(!isset($datos["orden"]) || $datos["orden"] == '' || $datos["orden"] > $cantidadServicios || $datos["orden"] < 1){
+				
+				return "error_orden";
+			}
+
+			// Obtener el orden actual de este servicio
+			$ordenActual = ModeloHabitaciones::mdlObtenerOrdenActual($tabla, $datos["idHabitacion"]);
+			
+			// Si el orden cambió y ya existe otro servicio con ese orden
+			if($ordenActual && $ordenActual["orden"] != $datos["orden"]){
+				
+				// Buscar si hay otro servicio con el orden que queremos asignar
+				$servicioConOrdenDeseado = ModeloHabitaciones::mdlObtenerHabitacionPorOrden($tabla, $datos["orden"]);
+				
+				// Si existe otro servicio con ese orden, intercambiar
+				if($servicioConOrdenDeseado && $servicioConOrdenDeseado["id_h"] != $datos["idHabitacion"]){
+					
+					// Asignar el orden actual al otro servicio
+					ModeloHabitaciones::mdlActualizarHabitacion($tabla, "orden", $ordenActual["orden"], "id_h", $servicioConOrdenDeseado["id_h"]);
+					
+				}
+			}
+
 			$datos = array( "id_h" => $datos["idHabitacion"],
 							"tipo_h" => $datos["tipo_h"],
 							"estilo" => $datos["estilo"],
@@ -448,6 +501,7 @@ class ControladorHabitaciones{
 							"descripcion_h" => $datos["descripcion"],
 							"banner" => $pathImage,
 							"cupos" => $datos["cupos"],
+							"orden" => $datos["orden"],
 							"serviciosEnlazados" => $datos["serviciosEnlazados"],
 							"precio" => $datos["precio"],
 							"caracteristicas" => $datos["caracteristicas"],
