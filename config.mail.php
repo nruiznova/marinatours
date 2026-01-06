@@ -5,36 +5,38 @@
  */
 
 // Cargar variables de entorno desde archivo .env
-function loadEnv($path) {
-    if (!file_exists($path)) {
-        return false;
-    }
-
-    $lines = file($path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-    foreach ($lines as $line) {
-        // Ignorar comentarios
-        if (strpos(trim($line), '#') === 0) {
-            continue;
+if (!function_exists('loadEnv')) {
+    function loadEnv($path) {
+        if (!file_exists($path)) {
+            return false;
         }
 
-        // Parsear línea
-        if (strpos($line, '=') !== false) {
-            list($name, $value) = explode('=', $line, 2);
-            $name = trim($name);
-            $value = trim($value);
-            
-            // Remover comillas si existen
-            $value = trim($value, '"\'');
-            
-            // Establecer variable de entorno si no existe
-            if (!array_key_exists($name, $_ENV)) {
-                putenv("$name=$value");
-                $_ENV[$name] = $value;
-                $_SERVER[$name] = $value;
+        $lines = file($path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+        foreach ($lines as $line) {
+            // Ignorar comentarios
+            if (strpos(trim($line), '#') === 0) {
+                continue;
+            }
+
+            // Parsear línea
+            if (strpos($line, '=') !== false) {
+                list($name, $value) = explode('=', $line, 2);
+                $name = trim($name);
+                $value = trim($value);
+                
+                // Remover comillas si existen
+                $value = trim($value, '"\'');
+                
+                // Establecer variable de entorno si no existe
+                if (!array_key_exists($name, $_ENV)) {
+                    putenv("$name=$value");
+                    $_ENV[$name] = $value;
+                    $_SERVER[$name] = $value;
+                }
             }
         }
+        return true;
     }
-    return true;
 }
 
 // Cargar archivo .env
@@ -42,25 +44,27 @@ $envPath = __DIR__ . '/.env';
 loadEnv($envPath);
 
 // Función para obtener configuración de correo
-function getMailConfig($key, $default = null) {
-    // Intentar obtener de variables de entorno
-    $value = getenv($key);
-    if ($value !== false) {
-        return $value;
+if (!function_exists('getMailConfig')) {
+    function getMailConfig($key, $default = null) {
+        // Intentar obtener de variables de entorno
+        $value = getenv($key);
+        if ($value !== false) {
+            return $value;
+        }
+        
+        // Intentar obtener de $_ENV
+        if (isset($_ENV[$key])) {
+            return $_ENV[$key];
+        }
+        
+        // Intentar obtener de $_SERVER
+        if (isset($_SERVER[$key])) {
+            return $_SERVER[$key];
+        }
+        
+        // Retornar valor por defecto
+        return $default;
     }
-    
-    // Intentar obtener de $_ENV
-    if (isset($_ENV[$key])) {
-        return $_ENV[$key];
-    }
-    
-    // Intentar obtener de $_SERVER
-    if (isset($_SERVER[$key])) {
-        return $_SERVER[$key];
-    }
-    
-    // Retornar valor por defecto
-    return $default;
 }
 
 // Configuración de correo
