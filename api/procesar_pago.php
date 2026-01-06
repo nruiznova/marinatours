@@ -9,6 +9,9 @@ require_once __DIR__ . '/../controladores/reservas.controlador.php';
 require_once __DIR__ . '/../modelos/reservas.modelo.php';
 require_once __DIR__ . '/../extensiones/vendor/autoload.php';
 
+// Cargar configuración de correo
+$mailConfig = require __DIR__ . '/../config.mail.php';
+
 if ($_SERVER["REQUEST_METHOD"] === "POST" &&
     strpos($_SERVER["CONTENT_TYPE"] ?? '', "application/json") !== false) {
 
@@ -230,15 +233,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" &&
 
         try {
             $mail->isSMTP();
-            $mail->Host = 'smtp.gmail.com';
+            $mail->Host = $mailConfig['host'];
             $mail->SMTPAuth = true;
-            $mail->Username = 'reservas.marinatours@gmail.com';
-            $mail->Password = 'odwy xigx wbjp jgzo';
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            $mail->Port = 587;
+            $mail->Username = $mailConfig['username'];
+            $mail->Password = $mailConfig['password'];
+            $mail->SMTPSecure = $mailConfig['encryption'] === 'tls' ? PHPMailer::ENCRYPTION_STARTTLS : PHPMailer::ENCRYPTION_SMTPS;
+            $mail->Port = $mailConfig['port'];
             $mail->CharSet = 'UTF-8';
 
-            $mail->setFrom('reservas.marinatours@gmail.com', 'Hotel Isla Palma');
+            $mail->setFrom($mailConfig['from_address'], $mailConfig['from_name']);
             $mail->addAddress($correoCliente, $nombreCliente);
 
             $mail->isHTML(true);

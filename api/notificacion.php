@@ -22,6 +22,9 @@ require_once __DIR__ . '/../extensiones/vendor/autoload.php';
 require_once __DIR__ . '/../controladores/reservas.controlador.php';
 require_once __DIR__ . '/../modelos/reservas.modelo.php';
 
+// Cargar configuración de correo
+$mailConfig = require __DIR__ . '/../config.mail.php';
+
 $rawData = file_get_contents("php://input");
 $data = json_decode($rawData, true);
 
@@ -90,15 +93,15 @@ if ($type === 'payment' && $paymentId) {
 
                     $mail = new PHPMailer(true);
                     $mail->isSMTP();
-                    $mail->Host = 'smtp.gmail.com';
+                    $mail->Host = $mailConfig['host'];
                     $mail->SMTPAuth = true;
-                    $mail->Username = 'reservas.marinatours@gmail.com';
-                    $mail->Password = 'odwy xigx wbjp jgzo'; // ⚠️ Mejor usar variable segura
-                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-                    $mail->Port = 587;
+                    $mail->Username = $mailConfig['username'];
+                    $mail->Password = $mailConfig['password'];
+                    $mail->SMTPSecure = $mailConfig['encryption'] === 'tls' ? PHPMailer::ENCRYPTION_STARTTLS : PHPMailer::ENCRYPTION_SMTPS;
+                    $mail->Port = $mailConfig['port'];
                     $mail->CharSet = 'UTF-8';
 
-                    $mail->setFrom('reservas.marinatours@gmail.com', 'Marina Tours Cartagena');
+                    $mail->setFrom($mailConfig['from_address'], $mailConfig['from_name']);
                     $mail->addAddress($correoCliente, $nombreCliente);
                     $mail->isHTML(true);
                     $mail->Subject = 'Confirmación de tu reserva #' . $codigoReserva;
