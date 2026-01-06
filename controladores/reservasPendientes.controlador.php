@@ -54,6 +54,7 @@ class ControladorReservasPendientes {
                   $mail->isSMTP();
                   $mail->Host = $mailConfig['host'];
                   $mail->SMTPAuth = true;
+                  $mail->AuthType = $mailConfig['auth_type'];
                   $mail->Username = $mailConfig['username'];
                   $mail->Password = $mailConfig['password'];
                   $mail->SMTPSecure = $mailConfig['encryption'] === 'tls' ? PHPMailer::ENCRYPTION_STARTTLS : PHPMailer::ENCRYPTION_SMTPS;

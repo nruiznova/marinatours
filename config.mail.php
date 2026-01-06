@@ -72,4 +72,5 @@ return [
     'from_address' => getMailConfig('MAIL_FROM_ADDRESS', 'reservas.marinatours@gmail.com'),
     'from_name' => getMailConfig('MAIL_FROM_NAME', 'Hotel Isla Palma'),
     'encryption' => getMailConfig('MAIL_ENCRYPTION', 'tls'),
+    'auth_type' => getMailConfig('MAIL_AUTH_TYPE', 'LOGIN'), // Para Brevo/Sendinblue
 ];
