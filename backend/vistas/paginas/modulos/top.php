@@ -70,29 +70,25 @@ $sumaDevoluciones = ControladorInicio::ctrSumarDevoluciones($fecha_total, $id_s)
 Total Reservas
 =============================================*/
 
-// var_dump($fecha);
-
-$totalReservas = ControladorReservas::ctrMostrarReservas("fecha_ingreso", $fecha);
-
-// var_dump($totalReservas);
+$totalReservas = ControladorReservas::ctrMostrarReservas("fecha_salida", $fecha);
 
 $reservasTotal = 0;
 
 foreach ($totalReservas as $r => $reserva) {
 
-  // if(isset($_GET["id_s"])){
+  if($id_s == $reserva["id_habitacion"]){
 
-    if($id_s == $reserva["id_habitacion"]){
+    $desc = $reserva["descripcion_reserva"];
 
-      $desc = $reserva["descripcion_reserva"];
-  
-      $descArr = explode("-", $desc);
-  
-      $reservasTotal += intval($descArr[1]);
-  
-    }
+    $descArr = explode("-", $desc);
 
-  // }    
+    // Tomar el último elemento del array que contiene el número de personas
+    $ultimoElemento = trim($descArr[count($descArr) - 1]);
+    $numPersonas = intval($ultimoElemento);
+
+    $reservasTotal += $numPersonas;
+
+  }
 
 }
 

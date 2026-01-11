@@ -43,7 +43,7 @@ class TablaReservas{
 
 		if($_GET["item"] == 'fecha_ingreso'){
 
-			$item = 'fecha_salida';
+			$item = 'fecha_ingreso';
 
 			$valor = date("Y-m-d", strtotime($_GET["valor"])); 
 

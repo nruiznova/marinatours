@@ -97,9 +97,10 @@ class ModeloReservas{
 
 	static public function mdlCambiarReserva($tabla, $datos){
 
-		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET fecha_ingreso = :fecha_ingreso, firstName = :firstName, lastName = :lastName, tipo_identificacion = :tipo_identificacion, numero_identificacion = :numero_identificacion, celular = :celular, correo = :correo WHERE id_reserva = :id_reserva");
+		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET fecha_ingreso = :fecha_ingreso, fecha_salida = :fecha_salida, firstName = :firstName, lastName = :lastName, tipo_identificacion = :tipo_identificacion, numero_identificacion = :numero_identificacion, celular = :celular, correo = :correo WHERE id_reserva = :id_reserva");
 
 		$stmt->bindParam(":fecha_ingreso", $datos["fecha_ingreso"], PDO::PARAM_STR);
+		$stmt->bindParam(":fecha_salida", $datos["fecha_ingreso"], PDO::PARAM_STR);
 		$stmt->bindParam(":firstName", $datos["firstName"], PDO::PARAM_STR);
 		$stmt->bindParam(":lastName", $datos["lastName"], PDO::PARAM_STR);
 		$stmt->bindParam(":tipo_identificacion", $datos["tipo_identificacion"], PDO::PARAM_STR);

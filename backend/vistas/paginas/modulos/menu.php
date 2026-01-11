@@ -211,6 +211,23 @@
 
           <?php endif ?>
 
+        <!-- Botón Disponibilidad de Cupos (público) -->
+
+        <li class="nav-item">
+
+          <a href="<?php echo $ruta; ?>disponibilidad.php" class="nav-link" target="_blank">
+
+            <i class="nav-icon fas fa-chart-bar"></i>
+
+            <p>
+              Disponibilidad
+              <i class="fas fa-external-link-alt ml-2" style="font-size: 0.8rem;"></i>
+            </p>
+
+          </a>
+
+        </li>
+
         <?php if ($permisos[7]["mostrar"] == true): ?>
 
         <!-- Botón página testimonios -->

@@ -21,13 +21,90 @@ foreach ($traerReservas as $key => $value) {
 
 <style>
 	.fc-event {
-		border: 1px solid #3a87ad !important; /* default BORDER color */
-		background-color: #3a87ad !important; /* default BACKGROUND color */
-		color: #fff !important;               /* default TEXT color */
-		font-size: 1.85em;            /* EDIT HERE */
-		cursor: default;
+		border: none !important;
+		background: linear-gradient(135deg, #28a745 0%, #20c997 100%) !important;
+		color: #fff !important;
+		font-size: 0.95em !important;
+		cursor: pointer;
 		text-align: center;
-		font-weight: bold;
+		font-weight: 700;
+		padding: 6px 10px !important;
+		border-radius: 6px !important;
+		box-shadow: 0 2px 6px rgba(40, 167, 69, 0.3);
+		transition: all 0.3s ease;
+		white-space: nowrap;
+		overflow: visible !important;
+	}
+	
+	.fc-event:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 10px rgba(40, 167, 69, 0.5);
+		background: linear-gradient(135deg, #218838 0%, #1ea87a 100%) !important;
+	}
+	
+	.fc-title {
+		font-size: 1.2em !important;
+		letter-spacing: 0.5px;
+	}
+	
+	.fc-content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		white-space: nowrap;
+	}
+	
+	.fc-day-grid-event {
+		margin: 4px auto !important;
+		width: fit-content !important;
+		min-width: 60px;
+	}
+	
+	/* Hacer que los eventos no se extiendan horizontalmente */
+	.fc-day-grid-event .fc-content {
+		display: inline-block;
+		width: auto;
+	}
+	
+	.fc-day-number {
+		color: #495057;
+		font-weight: 600;
+		padding: 8px;
+	}
+	
+	.fc-today {
+		background-color: #fff9e6 !important;
+	}
+	
+	.fc-day-top {
+		text-align: center;
+	}
+	
+	/* Centrar eventos en las celdas del día */
+	.fc-day-grid-container {
+		text-align: center;
+	}
+	
+	.fc-content-skeleton td {
+		text-align: center;
+	}
+	
+	/* Mejorar apariencia del header */
+	.fc-toolbar h2 {
+		font-size: 1.5em;
+		color: #495057;
+		font-weight: 600;
+	}
+	
+	.fc-button {
+		background-color: #007bff !important;
+		border-color: #007bff !important;
+		text-transform: capitalize;
+	}
+	
+	.fc-button:hover {
+		background-color: #0056b3 !important;
+		border-color: #0056b3 !important;
 	}
 </style>
 
@@ -70,41 +147,47 @@ var dia = ("0"+fechaActual.getDate()).slice(-2);
 
 			<?php
 
-				$fechas = array();
+				// Array para contar personas por fecha de ingreso
+				$reservasPorFecha = array();
 
+				// Recorrer todas las reservas y sumar personas por fecha
 				for($i = 0; $i < count($descripcion); $i++){
 
-					$desc = $descripcion[$i];
-
-					$descArr = explode(" - ", $desc);
-
-					$personasArr = explode(" ", $descArr[1]);
-
-					$cantidad_personas = intval($personasArr[0]);
-
-					// var_dump(cantidad_personas);
-
-					if(isset($fechas[$fechaIngreso[$i]])){
-
-						$fechas[$fechaIngreso[$i]] = $fechas[$fechaIngreso[$i]] + $cantidad_personas;			
-
-					}else{
-
-						$fechas[$fechaIngreso[$i]] = $cantidad_personas;
-
+					// Saltar si no hay fecha de ingreso válida
+					if(empty($fechaIngreso[$i]) || $fechaIngreso[$i] == '0000-00-00' || $fechaIngreso[$i] == null){
+						continue;
 					}
 
+					$desc = $descripcion[$i];
+					$descArr = explode("-", $desc);
+
+					// Tomar el último elemento que contiene el número de personas
+					$ultimoElemento = trim($descArr[count($descArr) - 1]);
+					$cantidad_personas = intval($ultimoElemento);
+
+					// Usar fecha_ingreso como clave para agrupar
+					$fecha = $fechaIngreso[$i];
+
+					if(isset($reservasPorFecha[$fecha])){
+						$reservasPorFecha[$fecha]['personas'] += $cantidad_personas;
+						$reservasPorFecha[$fecha]['reservas']++;
+					}else{
+						$reservasPorFecha[$fecha] = array(
+							'personas' => $cantidad_personas,
+							'reservas' => 1
+						);
+					}
 				}			
 				
-				$noRepetirFechas = array_unique($fechaIngreso);							
+				// Generar eventos para cada fecha única
+				foreach($reservasPorFecha as $fecha => $datos){
+					$cantidadPersonas = $datos['personas'];
+					$cantidadReservas = $datos['reservas'];
+					$titulo = "👥 " . $cantidadPersonas;
 
-				for($j = 0; $j < count($descripcion); $j++){
-
-					echo '{"title":"'.$fechas[$noRepetirFechas[$j]].'",
-						"start":"'.$noRepetirFechas[$j].'",
-						"end":"'.$fechaSalida[$j].'",
-						"color": "#FFCC29"},';									
-
+					echo '{"title":"'.$titulo.'",
+						"start":"'.$fecha.'",
+						"allDay":true},';									
 				}				
 
 			?>
