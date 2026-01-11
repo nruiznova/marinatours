@@ -2,6 +2,11 @@ Options All -Indexes
 
 RewriteEngine On
 
+# Regla específica para disponibilidad de cupos (URL amigable)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^disponibilidad/?$ disponibilidad.php [QSA,L]
+
 # No aplicar rewrite si el archivo o directorio existe
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

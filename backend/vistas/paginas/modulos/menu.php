@@ -215,7 +215,7 @@
 
         <li class="nav-item">
 
-          <a href="<?php echo $ruta; ?>disponibilidad.php" class="nav-link" target="_blank">
+          <a href="<?php echo $ruta; ?>disponibilidad" class="nav-link" target="_blank">
 
             <i class="nav-icon fas fa-chart-bar"></i>
 
