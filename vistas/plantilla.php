@@ -480,6 +480,7 @@ if(isset($_GET["pagina"])){
 	    if($_GET["pagina"] == "reservas" 
 		|| $_GET["pagina"] == "perfil" 
 		|| $_GET["pagina"] == "salir"
+		|| $_GET["pagina"] == "disponibilidad"
 		|| $_GET["pagina"] == "pasadias"
 		|| $_GET["pagina"] == "transporte"
 		|| $_GET["pagina"] == "contactenos"
