@@ -1,5 +1,8 @@
 <?php
 
+session_start();
+
+require_once "controladores/ruta.controlador.php";
 require_once "controladores/habitaciones.controlador.php";
 require_once "modelos/habitaciones.modelo.php";
 
@@ -9,6 +12,10 @@ require_once "modelos/reservas.modelo.php";
 require_once "modelos/conexion.php";
 
 date_default_timezone_set('America/Bogota');
+
+// Definir rutas necesarias
+$ruta = ControladorRuta::ctrRuta();
+$servidor = ControladorRuta::ctrServidor();
 
 // Obtener fecha del parámetro GET o usar la fecha de mañana por defecto
 if(isset($_GET["fecha"])){
@@ -40,36 +47,13 @@ foreach ($servicios as $servicio) {
 // Función para calcular cupos disponibles
 function calcularCuposDisponibles($servicio, $fecha){
     
-    $cuposTotales = intval($servicio["cupos"]);
-    
-    // Obtener reservas para esa fecha y servicio
-    $reservas = ControladorReservas::ctrMostrarReservas("fecha_ingreso", $fecha);
-    
-    $cuposReservados = 0;
-    
-    if($reservas){
-        foreach($reservas as $reserva){
-            
-            // Verificar si la reserva es para este servicio
-            if($reserva["id_habitacion"] == $servicio["id_h"]){
-                
-                // Extraer número de personas de la descripción
-                $desc = $reserva["descripcion_reserva"];
-                $descArr = explode("-", $desc);
-                $ultimoElemento = trim($descArr[count($descArr) - 1]);
-                $personas = intval($ultimoElemento);
-                
-                $cuposReservados += $personas;
-            }
-        }
-    }
-    
-    $cuposDisponibles = $cuposTotales - $cuposReservados;
+    // Usar la misma validación que en info-reservas.php
+    $resultado = ControladorReservas::ctrVerificarDisponibilidad($servicio["id_h"], $fecha);
     
     return array(
-        'total' => $cuposTotales,
-        'reservados' => $cuposReservados,
-        'disponibles' => $cuposDisponibles > 0 ? $cuposDisponibles : 0
+        'total' => isset($resultado['cupos_totales']) ? $resultado['cupos_totales'] : 0,
+        'reservados' => isset($resultado['personas_reservadas']) ? $resultado['personas_reservadas'] : 0,
+        'disponibles' => isset($resultado['disponibles']) ? $resultado['disponibles'] : 0
     );
 }
 
