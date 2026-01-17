@@ -120,7 +120,9 @@ if(isset($_GET["typeFilter"])){
 
 }else{
 
-  $get_ventas .= '&typeFilter=all&valueFilter=';
+  // Mantener valor por defecto: todos los días del mes actual
+  $mesActual = date("Y-m");
+  $get_ventas .= '&typeFilter=month&valueFilter='.$mesActual;
 
 }
 
