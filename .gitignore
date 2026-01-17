@@ -10,6 +10,7 @@
 # Los archivos seguirán en el repo, pero Git ignorará modificaciones locales
 config.local.php
 config.prod.php
+.env
 
 # ==========================================
 # ARCHIVOS DE DEBUG Y DESARROLLO

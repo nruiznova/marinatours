@@ -79,7 +79,7 @@ Total Reservas
 // var_dump($fecha);
 // var_dump($id_s);
 
-$totalReservas = ControladorReservas::ctrMostrarReservas("fecha_salida", $fecha);
+$totalReservas = ControladorReservas::ctrMostrarReservas("fecha_ingreso", $fecha);
 
 // var_dump($totalReservas);
 
@@ -89,13 +89,19 @@ foreach ($totalReservas as $r => $reserva) {
 
   if($id_s == $reserva["id_habitacion"]){
 
+    // EXCLUIR reservas anuladas (estado=2) y con devolución (estado=3)
+    if(isset($reserva["estado"]) && ($reserva["estado"] == 2 || $reserva["estado"] == 3)){
+      continue; // Saltar esta reserva
+    }
+
     $desc = $reserva["descripcion_reserva"];
 
-    $descArr = explode("-", $desc);
-
-    // Tomar el último elemento del array que contiene el número de personas
-    $ultimoElemento = trim($descArr[count($descArr) - 1]);
-    $numPersonas = intval($ultimoElemento);
+    // Usar regex para extraer el número de personas de manera más confiable
+    // Formato esperado: "Nombre - Plan - X personas"
+    $numPersonas = 0;
+    if(preg_match('/(\d+)\s*persona/i', $desc, $matches)){
+      $numPersonas = intval($matches[1]);
+    }
 
     $reservasTotal += $numPersonas;
 

@@ -1,12 +1,28 @@
 <?php 
 
+// Obtener todos los servicios de Isla Palma
+$servicios = array();
+$serviciosAll = ControladorHabitaciones::ctrMostrarHabitaciones(null);
+
+foreach ($serviciosAll as $row => $item) {
+    if (strpos($item["estilo"], 'ISLA PALMA') !== false || strpos($item["estilo"], 'isla palma') !== false) {
+        array_push($servicios, $item["id_h"]);
+    }
+}
+
 $reservas = array();
 
 $reservasAll = ControladorReservas::ctrMostrarReservas(null, null);
 
 foreach ($reservasAll as $key => $value) {
     
-    if (strpos($value["descripcion_reserva"], 'ISLA PALMA') !== false || strpos($value["descripcion_reserva"], 'isla palma') !== false) {
+    // Verificar que sea un servicio de Isla Palma
+    if (in_array($value["id_habitacion"], $servicios)) {
+        
+        // Excluir reservas anuladas (estado=2) y con devolución (estado=3)
+        if(isset($value["estado"]) && ($value["estado"] == 2 || $value["estado"] == 3)){
+            continue; // Saltar esta reserva
+        }
 
         array_push($reservas, $value);
 

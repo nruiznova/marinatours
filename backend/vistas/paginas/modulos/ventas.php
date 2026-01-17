@@ -44,13 +44,38 @@ if(isset($_GET["typeFilter"])){
 
 $respuesta = ControladorReservas::ctrMostrarReservas($item, $valor);
 
+// Obtener el id de habitación seleccionado SOLO si hay un filtro aplicado
+$id_habitacion_filtro = null;
+$filtroAplicado = false;
+
+if(isset($_GET["id_s"]) && $_GET["id_s"] !== '' && $_GET["id_s"] != '0'){
+    if(isset($servicios[$_GET["id_s"]])){
+        $id_habitacion_filtro = $servicios[$_GET["id_s"]]["id_h"];
+        $filtroAplicado = true;
+    }
+}
+
 $arrayFechas = array();
 $sumaPagosMes = array();
 $arrayTest = array();
 
 foreach ($respuesta as $key => $value){
 
-    if($value["fecha_ingreso"] != null){
+    // Excluir reservas anuladas (estado=2) y con devolución (estado=3)
+    $incluirReserva = true;
+    
+    if(isset($value["estado"]) && ($value["estado"] == 2 || $value["estado"] == 3)){
+        $incluirReserva = false;
+    }
+    
+    // Filtrar por id_habitacion SOLO si hay un filtro específico aplicado
+    if($filtroAplicado && $id_habitacion_filtro !== null){
+        if($value["id_habitacion"] != $id_habitacion_filtro){
+            $incluirReserva = false;
+        }
+    }
+
+    if($incluirReserva && $value["fecha_ingreso"] != null){
 
         #Capturamos año y mes
         if(isset($_GET["typeFilter"])){
@@ -133,17 +158,32 @@ foreach ($respuesta as $key => $value){
 
             }else if($_GET["typeFilter"] == "all"){
 
-                $fecha = date("Y", strtotime($value["fecha_ingreso"]));
+                // Validar que la fecha sea válida y no esté vacía
+                if($value["fecha_ingreso"] != null && 
+                   $value["fecha_ingreso"] != '0000-00-00' && 
+                   $value["fecha_ingreso"] != '' &&
+                   strtotime($value["fecha_ingreso"]) !== false){
+                    
+                    $fecha = date("Y", strtotime($value["fecha_ingreso"]));
+                    
+                    // Solo incluir años válidos (por ejemplo, desde 2020 hasta el año actual + 5)
+                    $anioActual = date("Y");
+                    if($fecha >= 2020 && $fecha <= ($anioActual + 5)){
 
-                #Capturamos las ventas    
-                $arrayVentas = array($fecha => $value["pago_reserva"]);    
-                
-                #Sumamos los pagos que ocurrieron el mismo mes
-
-                foreach ($arrayVentas as $key2 => $value2) {
-
-                    $sumaPagosMes[$key2] += $value2;
+                        #Capturamos las ventas    
+                        $arrayVentas = array($fecha => $value["pago_reserva"]);    
                         
+                        #Sumamos los pagos que ocurrieron el mismo año
+
+                        foreach ($arrayVentas as $key2 => $value2) {
+
+                            $sumaPagosMes[$key2] += $value2;
+                                
+                        }
+                        
+                        #Introducir las fechas válidas en arrayFechas
+                        array_push($arrayFechas, $fecha);
+                    }
                 }
                 
             }	
@@ -184,11 +224,11 @@ foreach ($respuesta as $key => $value){
                 $sumaPagosMes[$key2] += $value2;
                     
             }
+            
+            #Introducir las fechas en arrayFechas
+            array_push($arrayFechas, $fecha);
 
         }
-
-        #Introducir las fechas en arrayFechas
-        array_push($arrayFechas, $fecha);	
         
     }
 	
@@ -196,6 +236,9 @@ foreach ($respuesta as $key => $value){
 
 
 $noRepetirFechas = array_unique($arrayFechas);
+
+// Ordenar las fechas para que aparezcan en orden cronológico
+sort($noRepetirFechas);
 
 // var_dump($sumaPagosMes);
 

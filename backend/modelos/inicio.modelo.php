@@ -5,13 +5,14 @@ require_once "conexion.php";
 class ModeloInicio{
 
 	/*=============================================
-	Sumar Ventas (Excluyendo devoluciones)
+	Sumar Ventas (Excluyendo anuladas y devoluciones)
 	=============================================*/
 
 	static public function mdlSumarVentas($tabla, $fecha, $id_s){ 
 
-		// Excluir devoluciones: estado = 3 y fecha_ingreso = NULL
-		$stmt = Conexion::conectar()->prepare("SELECT SUM(pago_reserva) as total FROM $tabla WHERE fecha_reserva LIKE :fecha AND id_habitacion = :id_habitacion AND NOT (estado = 3 AND fecha_ingreso IS NULL)");
+		// Sumar ventas para servicios con fecha_ingreso específica
+		// Excluir reservas anuladas (estado=2) y con devolución (estado=3)
+		$stmt = Conexion::conectar()->prepare("SELECT SUM(pago_reserva) as total FROM $tabla WHERE fecha_ingreso LIKE :fecha AND id_habitacion = :id_habitacion AND (estado IS NULL OR estado = 0 OR estado = 1)");
 
 		$valor_like = '%' . $fecha . '%'; 
 
@@ -35,9 +36,9 @@ class ModeloInicio{
 
 	static public function mdlSumarDevoluciones($tabla, $fecha, $id_s){ 
 
-		// Solo devoluciones: estado = 3 y fecha_ingreso = NULL
-		// Vinculado con la fecha en que se realizó la reserva (fecha_reserva)
-		$stmt = Conexion::conectar()->prepare("SELECT SUM(pago_reserva) as total FROM $tabla WHERE fecha_reserva LIKE :fecha AND id_habitacion = :id_habitacion AND estado = 3 AND fecha_ingreso IS NULL");
+		// Sumar devoluciones de servicios que estaban programados para esta fecha
+		// Solo reservas con estado = 3 (devolución)
+		$stmt = Conexion::conectar()->prepare("SELECT SUM(pago_reserva) as total FROM $tabla WHERE fecha_ingreso LIKE :fecha AND id_habitacion = :id_habitacion AND estado = 3");
 
 		$valor_like = '%' . $fecha . '%'; 
 
